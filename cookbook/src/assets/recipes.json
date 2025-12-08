@@ -1,0 +1,44 @@
+{
+  "recipes": [
+    {
+      "name": "Crêpes (Beispiel)",
+      "image": "assets/images/crepes.jpg",
+      "description": "Dünne, leichte Crêpes für ein schnelles Frühstück.",
+      "ingredients": [
+        {
+          "name": "Mehl",
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "name": "Geschmolzene Butter",
+          "amount": 25,
+          "unit": "g"
+        },
+        {
+          "name": "Ei",
+          "amount": 1,
+          "unit": "stk"
+        },
+        {
+          "name": "Milch",
+          "amount": 200,
+          "unit": "ml"
+        },
+        {
+          "name": "Salz",
+          "amount": 1,
+          "unit": "Prise"
+        }
+      ],
+      "servings": 2,
+      "time": "30 Min",
+      "instructions": [
+        "Alle Zutaten bereitstellen. Butter bei kleiner Hitze schmelzen, beiseite stellen.",
+        "Mehl und Salz in einer Schüssel mischen, eine Mulde formen.",
+        "Eier und Milch verrühren, in die Mulde giessen. Von der Mitte her mit dem Schwingbesen anrühren. Geschmolzene Butter nach und nach dazugeben. Rühren, bis ein glatter Teig entstanden ist. Zugedeckt 30 Minuten quellen lassen.",
+        "Wenig Bratbutter in einer beschichteten Bratpfanne heiss werden lassen. Ca. 1/2 Kelle des Teigs in die Pfanne geben, sodass der Boden dünn überzogen ist. Hitze reduzieren. Ist die Unterseite gebacken und löst sie sich von selbst, Crêpes wenden, fertig backen, zugedeckt warm stellen. Mit dem restlichen Teig gleich verfahren."
+      ]
+    }
+  ]
+}

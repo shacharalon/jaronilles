@@ -1,0 +1,155 @@
+<h3 class="recipe-page-title text-center">Meine Rezepte</h3>
+<hr class="recipe-divider" />
+
+<div class="recipe-page">
+  <div class="row g-4 recipe-grid">
+    <div class="col-md-6" *ngFor="let recipe of recipes">
+      <article class="card recipe-card" (click)="openModal(recipe)">
+        <div class="row g-0 align-items-center recipe-card-inner">
+
+          <!-- IMAGE LEFT (FITTED, NOT CUT) -->
+          <div
+            class="col-4 d-flex align-items-center justify-content-center recipe-card-image-col"
+            *ngIf="recipe.image"
+          >
+            <div class="recipe-card-image-wrapper">
+              <img
+                [src]="recipe.image"
+                class="recipe-card-image"
+                alt="{{ recipe.name }}"
+              />
+            </div>
+          </div>
+
+          <!-- CONTENT RIGHT -->
+          <div class="col-8">
+            <div class="card-body recipe-card-body">
+              <h5 class="recipe-card-title">{{ recipe.name }}</h5>
+
+              <p class="recipe-card-description">
+                {{ recipe.description }}
+              </p>
+
+              <div class="recipe-meta">
+                <span class="recipe-meta-item">
+                  <i class="fa-regular fa-clock"></i> {{ recipe.time }}
+                </span>
+                <span class="recipe-meta-dot">&bull;</span>
+                <span class="recipe-meta-item">
+                  <i class="fa-solid fa-user-group"></i>
+                  {{ recipe.servings }} Personen
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="recipeModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content recipe-modal" *ngIf="selectedRecipe">
+      <!-- HEADER: title + time/servings -->
+      <div class="modal-header recipe-modal-header">
+        <div class="recipe-modal-title-wrapper">
+          <h5 class="modal-title">{{ selectedRecipe.name }}</h5>
+
+          <div class="recipe-meta recipe-meta-light">
+            <span class="recipe-meta-item">
+              <i class="fa-regular fa-clock"></i> {{ selectedRecipe.time }}
+            </span>
+            <span class="recipe-meta-dot">&bull;</span>
+            <span class="recipe-meta-item">
+              <i class="fa-solid fa-user-group"></i>
+              {{ currentServings }} Personen
+            </span>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="btn-close recipe-modal-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body recipe-modal-body">
+        <!-- Short description (optional) -->
+        <p class="recipe-modal-description">
+          {{ selectedRecipe.description }}
+        </p>
+
+        <!-- Divider -->
+        <div class="recipe-section-divider"></div>
+
+        <!-- SERVINGS BANNER -->
+        <div class="recipe-servings-banner">
+          <span class="label">Portionen</span>
+          <div class="controls">
+            <button
+              class="btn btn-sm btn-outline-secondary"
+              (click)="changeServings(-1)"
+            >
+              -
+            </button>
+            <span class="value">{{ currentServings }}</span>
+            <button
+              class="btn btn-sm btn-outline-secondary"
+              (click)="changeServings(1)"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="recipe-section-divider"></div>
+
+        <!-- TWO-COLUMN LAYOUT -->
+        <div class="row recipe-modal-main">
+          <!-- LEFT: IMAGE + INGREDIENTS -->
+          <div class="col-md-5">
+            <ng-container *ngIf="selectedRecipe.image">
+              <div class="recipe-modal-image-wrapper">
+                <img
+                  [src]="selectedRecipe.image"
+                  class="recipe-modal-image"
+                  alt="{{ selectedRecipe.name }}"
+                />
+              </div>
+            </ng-container>
+
+            <section class="recipe-section mt-3">
+              <h6 class="recipe-section-title">Zutaten</h6>
+              <ul class="recipe-ingredients">
+                <li *ngFor="let ing of selectedRecipe.ingredients">
+                  {{ getAdjustedAmount(ing.amount) | number:'1.0-2' }}
+                  {{ ing.unit }} {{ ing.name }}
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- RIGHT: INSTRUCTIONS -->
+          <div class="col-md-7">
+            <section class="recipe-section">
+              <h6 class="recipe-section-title">Zubereitung</h6>
+              <ol class="recipe-steps">
+                <li *ngFor="let step of selectedRecipe.instructions">
+                  {{ step }}
+                </li>
+              </ol>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-modal-footer-line"></div>
+    </div>
+  </div>
+</div>
