@@ -4,6 +4,7 @@
       "name": "Crêpes (Beispiel)",
       "image": "assets/images/crepes.jpg",
       "description": "Dünne, leichte Crêpes für ein schnelles Frühstück.",
+      "category": "savory",
       "ingredients": [
         {
           "name": "Mehl",
@@ -38,6 +39,129 @@
         "Mehl und Salz in einer Schüssel mischen, eine Mulde formen.",
         "Eier und Milch verrühren, in die Mulde giessen. Von der Mitte her mit dem Schwingbesen anrühren. Geschmolzene Butter nach und nach dazugeben. Rühren, bis ein glatter Teig entstanden ist. Zugedeckt 30 Minuten quellen lassen.",
         "Wenig Bratbutter in einer beschichteten Bratpfanne heiss werden lassen. Ca. 1/2 Kelle des Teigs in die Pfanne geben, sodass der Boden dünn überzogen ist. Hitze reduzieren. Ist die Unterseite gebacken und löst sie sich von selbst, Crêpes wenden, fertig backen, zugedeckt warm stellen. Mit dem restlichen Teig gleich verfahren."
+      ]
+    },
+    {
+      "name": "Pasta al Pomodoro",
+      "image": "assets/images/pasta.jpg",
+      "description": "Klassische italienische Pasta mit hausgemachter Tomatensauce – einfach, aromatisch und unwiderstehlich.",
+      "category": "savory",
+      "ingredients": [
+        {
+          "name": "Spaghetti",
+          "amount": 400,
+          "unit": "g"
+        },
+        {
+          "name": "Dosentomaten (gehackt)",
+          "amount": 400,
+          "unit": "g"
+        },
+        {
+          "name": "Knoblauch",
+          "amount": 3,
+          "unit": "Zehen"
+        },
+        {
+          "name": "Olivenöl",
+          "amount": 4,
+          "unit": "EL"
+        },
+        {
+          "name": "Frisches Basilikum",
+          "amount": 1,
+          "unit": "Handvoll"
+        },
+        {
+          "name": "Salz",
+          "amount": 1,
+          "unit": "Prise"
+        },
+        {
+          "name": "Zucker",
+          "amount": 1,
+          "unit": "TL"
+        },
+        {
+          "name": "Parmesan (gerieben)",
+          "amount": 50,
+          "unit": "g"
+        }
+      ],
+      "servings": 4,
+      "time": "25 Min",
+      "instructions": [
+        "Einen grossen Topf mit reichlich gesalzenem Wasser zum Kochen bringen.",
+        "Knoblauch schälen und fein hacken. Olivenöl in einer Pfanne bei mittlerer Hitze erwärmen, Knoblauch darin 1–2 Minuten goldgelb anschwitzen.",
+        "Dosentomaten in die Pfanne geben, Zucker hinzufügen und alles bei niedriger Hitze 15 Minuten köcheln lassen, bis die Sauce eindickt. Mit Salz abschmecken.",
+        "Spaghetti gemäss Packungsanweisung al dente kochen. Etwas Kochwasser aufbewahren, dann die Pasta abgiessen.",
+        "Pasta zur Tomatensauce geben und gut vermischen. Bei Bedarf etwas Kochwasser hinzufügen, um die gewünschte Konsistenz zu erreichen.",
+        "Mit frischem Basilikum und geriebenem Parmesan servieren."
+      ]
+    },
+    {
+      "name": "Blaubeer-Muffins",
+      "image": "assets/images/muffins.jpg",
+      "description": "Saftige Muffins mit frischen Blaubeeren – perfekt zum Frühstück oder als süsser Snack.",
+      "category": "dessert",
+      "ingredients": [
+        {
+          "name": "Mehl",
+          "amount": 250,
+          "unit": "g"
+        },
+        {
+          "name": "Zucker",
+          "amount": 150,
+          "unit": "g"
+        },
+        {
+          "name": "Backpulver",
+          "amount": 2,
+          "unit": "TL"
+        },
+        {
+          "name": "Salz",
+          "amount": 0.5,
+          "unit": "TL"
+        },
+        {
+          "name": "Ei",
+          "amount": 2,
+          "unit": "stk"
+        },
+        {
+          "name": "Milch",
+          "amount": 180,
+          "unit": "ml"
+        },
+        {
+          "name": "Pflanzenöl",
+          "amount": 80,
+          "unit": "ml"
+        },
+        {
+          "name": "Vanilleextrakt",
+          "amount": 1,
+          "unit": "TL"
+        },
+        {
+          "name": "Frische Blaubeeren",
+          "amount": 200,
+          "unit": "g"
+        }
+      ],
+      "servings": 12,
+      "time": "35 Min",
+      "instructions": [
+        "Backofen auf 190 °C Ober-/Unterhitze vorheizen. Ein Muffinblech mit 12 Papierförmchen auskleiden.",
+        "Mehl, Zucker, Backpulver und Salz in einer grossen Schüssel mischen.",
+        "Eier, Milch, Öl und Vanilleextrakt in einer separaten Schüssel verquirlen.",
+        "Die flüssigen Zutaten zu den trockenen geben und nur so lange rühren, bis alles gerade verbunden ist – der Teig darf ruhig klumpig sein.",
+        "Blaubeeren vorsichtig unterheben.",
+        "Teig gleichmässig in die Förmchen füllen (ca. ¾ voll).",
+        "Im vorgeheizten Ofen 20–22 Minuten backen, bis ein Zahnstocher sauber herauskommt.",
+        "5 Minuten im Blech abkühlen lassen, dann auf ein Gitter stellen."
       ]
     }
   ]

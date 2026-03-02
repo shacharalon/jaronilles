@@ -1,0 +1,152 @@
+<h3 class="dessert-page-title text-center">Meine Desserts</h3>
+<hr class="dessert-divider" />
+
+<div class="dessert-page">
+  <div class="row g-4 dessert-grid">
+    <div class="col-md-6" *ngFor="let recipe of recipes">
+      <article class="card dessert-card" (click)="openModal(recipe)">
+        <div class="row g-0 align-items-center dessert-card-inner">
+
+          <!-- IMAGE LEFT -->
+          <div
+            class="col-4 d-flex align-items-center justify-content-center dessert-card-image-col"
+            *ngIf="recipe.image"
+          >
+            <div class="dessert-card-image-wrapper">
+              <img
+                [src]="recipe.image"
+                class="dessert-card-image"
+                alt="{{ recipe.name }}"
+              />
+            </div>
+          </div>
+
+          <!-- CONTENT RIGHT -->
+          <div class="col-8">
+            <div class="card-body dessert-card-body">
+              <h5 class="dessert-card-title">{{ recipe.name }}</h5>
+
+              <p class="dessert-card-description">
+                {{ recipe.description }}
+              </p>
+
+              <div class="dessert-meta">
+                <span class="dessert-meta-item">
+                  <i class="fa-regular fa-clock"></i> {{ recipe.time }}
+                </span>
+                <span class="dessert-meta-dot">&bull;</span>
+                <span class="dessert-meta-item">
+                  <i class="fa-solid fa-user-group"></i>
+                  {{ recipe.servings }} Personen
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="dessertModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content dessert-modal" *ngIf="selectedRecipe">
+      <!-- HEADER -->
+      <div class="modal-header dessert-modal-header">
+        <div class="dessert-modal-title-wrapper">
+          <h5 class="modal-title">{{ selectedRecipe.name }}</h5>
+
+          <div class="dessert-meta dessert-meta-light">
+            <span class="dessert-meta-item">
+              <i class="fa-regular fa-clock"></i> {{ selectedRecipe.time }}
+            </span>
+            <span class="dessert-meta-dot">&bull;</span>
+            <span class="dessert-meta-item">
+              <i class="fa-solid fa-user-group"></i>
+              {{ currentServings }} Personen
+            </span>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="btn-close dessert-modal-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body dessert-modal-body">
+        <p class="dessert-modal-description">
+          {{ selectedRecipe.description }}
+        </p>
+
+        <div class="dessert-section-divider"></div>
+
+        <!-- SERVINGS BANNER -->
+        <div class="dessert-servings-banner">
+          <span class="label">Portionen</span>
+          <div class="controls">
+            <button
+              class="btn btn-sm btn-outline-secondary"
+              (click)="changeServings(-1)"
+            >
+              -
+            </button>
+            <span class="value">{{ currentServings }}</span>
+            <button
+              class="btn btn-sm btn-outline-secondary"
+              (click)="changeServings(1)"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <div class="dessert-section-divider"></div>
+
+        <!-- TWO-COLUMN LAYOUT -->
+        <div class="row dessert-modal-main">
+          <!-- LEFT: IMAGE + INGREDIENTS -->
+          <div class="col-md-5">
+            <ng-container *ngIf="selectedRecipe.image">
+              <div class="dessert-modal-image-wrapper">
+                <img
+                  [src]="selectedRecipe.image"
+                  class="dessert-modal-image"
+                  alt="{{ selectedRecipe.name }}"
+                />
+              </div>
+            </ng-container>
+
+            <section class="dessert-section mt-3">
+              <h6 class="dessert-section-title">Zutaten</h6>
+              <ul class="dessert-ingredients">
+                <li *ngFor="let ing of selectedRecipe.ingredients">
+                  {{ getAdjustedAmount(ing.amount) | number:'1.0-2' }}
+                  {{ ing.unit }} {{ ing.name }}
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- RIGHT: INSTRUCTIONS -->
+          <div class="col-md-7">
+            <section class="dessert-section">
+              <h6 class="dessert-section-title">Zubereitung</h6>
+              <ol class="dessert-steps">
+                <li *ngFor="let step of selectedRecipe.instructions">
+                  {{ step }}
+                </li>
+              </ol>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="dessert-modal-footer-line"></div>
+    </div>
+  </div>
+</div>

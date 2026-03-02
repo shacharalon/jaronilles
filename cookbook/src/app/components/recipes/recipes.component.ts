@@ -19,7 +19,7 @@ export class RecipesComponent {
 
   ngOnInit() {
     this.recipesService.getRecipes().subscribe(data => {
-      this.recipes = data.recipes;
+      this.recipes = data.recipes.filter(r => r.category === 'savory');
     });
   }
 

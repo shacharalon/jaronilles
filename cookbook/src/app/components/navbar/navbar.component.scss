@@ -1,0 +1,101 @@
+$paprika:      #D2452D;
+$paprika-dark: #A33422;
+$berry:        #6B4F9E;
+$berry-dark:   #4A3570;
+
+.cookbook-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.5rem;
+  background: #ffffff;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: $paprika-dark;
+  letter-spacing: 0.04em;
+
+  i {
+    color: $paprika;
+    font-size: 1.2rem;
+  }
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: background 0.18s ease, color 0.18s ease;
+  color: #555;
+
+  i {
+    font-size: 0.9em;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.savory-link {
+  &:hover {
+    background: $paprika;
+  }
+
+  &.active {
+    background: $paprika;
+    color: #ffffff;
+
+    i {
+      color: #ffffff;
+    }
+  }
+}
+
+.dessert-link {
+  &:hover {
+    background: $berry;
+  }
+
+  &.active {
+    background: $berry;
+    color: #ffffff;
+
+    i {
+      color: #ffffff;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .cookbook-navbar {
+    flex-direction: column;
+    gap: 0.75rem;
+    border-radius: 0;
+  }
+
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+  }
+}

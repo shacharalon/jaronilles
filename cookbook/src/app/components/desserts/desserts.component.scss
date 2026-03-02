@@ -1,0 +1,346 @@
+/******************************************
+ * Berry / Blueberry Farbpalette
+ ******************************************/
+$berry:        #6B4F9E;
+$berry-dark:   #4A3570;
+$berry-light:  #9B7DC8;
+$berry-cream:  #F5F0FF;
+$berry-accent: #E8A0BF;
+
+$neutral-text:   #3F3F3F;
+$neutral-muted:  #7A7A7A;
+$border-soft:    rgba(0, 0, 0, 0.06);
+
+
+/******************************************
+ * Seite / Header
+ ******************************************/
+.dessert-page {
+  padding: 1.5rem 0 3rem;
+}
+
+.dessert-page-title {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: $berry-dark;
+  margin-top: 1.5rem;
+}
+
+.dessert-divider {
+  width: 80px;
+  height: 3px;
+  border: 0;
+  margin: 0.5rem auto 2rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, $berry, $berry-accent);
+}
+
+.dessert-grid {
+  margin-top: 0.5rem;
+}
+
+
+/******************************************
+ * Karten (Dashboard)
+ ******************************************/
+.dessert-card {
+  border: none;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(74, 53, 112, 0.18);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.dessert-card-inner {
+  min-height: 150px;
+}
+
+.dessert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(74, 53, 112, 0.27);
+}
+
+.dessert-card-image-col {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dessert-card-image-wrapper {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.dessert-card-image {
+  max-height: 140px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.dessert-card-body {
+  padding: 1rem 1.2rem;
+}
+
+.dessert-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: $berry-dark;
+}
+
+.dessert-card-description {
+  margin: 0.3rem 0 0.6rem;
+  font-size: 0.9rem;
+  color: $neutral-muted;
+  max-height: 3rem;
+  overflow: hidden;
+}
+
+.dessert-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: $neutral-muted;
+}
+
+.dessert-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dessert-meta-item i {
+  font-size: 0.9em;
+  color: $berry;
+}
+
+.dessert-meta-dot {
+  font-size: 0.95rem;
+}
+
+
+/******************************************
+ * Modal
+ ******************************************/
+.dessert-modal {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 20px 60px rgba(74, 53, 112, 0.3);
+}
+
+.dessert-modal-header {
+  border-bottom: none;
+  padding: 1.4rem 1.6rem 1.1rem;
+  background: linear-gradient(135deg, $berry, $berry-dark);
+  color: #ffffff;
+}
+
+.dessert-modal-title-wrapper h5 {
+  margin: 0 0 0.25rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.dessert-meta-light {
+  color: rgba(255, 255, 255, 0.9);
+
+  .dessert-meta-item i {
+    color: #ffffff;
+  }
+}
+
+.dessert-modal-close {
+  background-color: #ffffff;
+  border-radius: 999px;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.dessert-modal-body {
+  padding: 1.6rem 1.6rem 1.4rem;
+  background: lighten($berry-cream, 3%);
+}
+
+.dessert-modal-description {
+  font-size: 0.95rem;
+  color: $neutral-text;
+  margin: 0 0 0.8rem;
+}
+
+.dessert-section-divider {
+  height: 1px;
+  width: 100%;
+  background: $border-soft;
+  margin: 0.8rem 0 1rem;
+}
+
+/******************************************
+ * Servings Banner
+ ******************************************/
+.dessert-servings-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba($berry-light, 0.12);
+  border: 1px solid rgba($berry, 0.25);
+  color: $berry-dark;
+}
+
+.dessert-servings-banner .label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.dessert-servings-banner .controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.dessert-servings-banner .value {
+  min-width: 1.8rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.dessert-servings-banner .btn-outline-secondary {
+  border-color: $berry;
+  color: $berry;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.8rem;
+
+  &:hover {
+    background: $berry;
+    color: #ffffff;
+  }
+}
+
+
+/******************************************
+ * Modal Inhalt (2 Spalten)
+ ******************************************/
+.dessert-modal-main {
+  margin-top: 1.2rem;
+}
+
+.dessert-modal-image-wrapper {
+  background: #ffffff;
+  border-radius: 1.1rem;
+  padding: 0.5rem;
+  box-shadow: 0 8px 20px rgba(74, 53, 112, 0.12);
+  max-height: 260px;
+  overflow: hidden;
+}
+
+.dessert-modal-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.9rem;
+}
+
+/******************************************
+ * Zutaten & Zubereitung
+ ******************************************/
+.dessert-section {
+  margin-bottom: 1.2rem;
+}
+
+.dessert-section-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $berry-dark;
+  margin-bottom: 0.5rem;
+}
+
+.dessert-ingredients,
+.dessert-steps {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  color: $neutral-text;
+}
+
+.dessert-steps {
+  counter-reset: berrySteps;
+  padding-left: 0;
+  list-style: none;
+}
+
+.dessert-steps li {
+  counter-increment: berrySteps;
+  margin-bottom: 1.2rem;
+  padding-left: 0;
+  color: $neutral-text;
+  line-height: 1.45;
+}
+
+.dessert-steps li::before {
+  content: counter(berrySteps);
+  display: block;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: $berry;
+  margin-bottom: 0.35rem;
+  line-height: 1;
+}
+
+.dessert-ingredients li + li,
+.dessert-steps li + li {
+  margin-top: 0.2rem;
+}
+
+
+/******************************************
+ * Footer Linie im Modal
+ ******************************************/
+.dessert-modal-footer-line {
+  height: 4px;
+  background: linear-gradient(90deg, $berry, $berry-accent);
+}
+
+
+/******************************************
+ * Responsive
+ ******************************************/
+@media (max-width: 767.98px) {
+  .dessert-card-inner {
+    min-height: auto;
+  }
+
+  .dessert-card-image-col {
+    min-height: 120px;
+  }
+
+  .dessert-card-body {
+    padding: 0.8rem 1rem;
+  }
+
+  .dessert-modal-main {
+    margin-top: 1rem;
+  }
+
+  .dessert-modal-image-wrapper {
+    max-height: 200px;
+  }
+}
