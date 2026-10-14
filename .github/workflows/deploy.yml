@@ -1,0 +1,32 @@
+name: Build & Deploy to Firebase
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v4
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Abhängigkeiten installieren
+        run: npm install
+
+      - name: Angular Build
+        run: npx ng build --configuration production
+
+      - name: Bei Firebase anmelden
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+
+      - name: Firebase Deploy
+        run: npx firebase-tools@latest deploy --project jaronilles-1975 --non-interactive
