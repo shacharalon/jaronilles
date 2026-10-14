@@ -34,13 +34,17 @@ export const CONTENT_DE: SiteContent = {
   photo: 'assets/images/jaron.webp',
 
   about: {
+    intro:
+      'Ich arbeite als Product Owner, im Management und in der Projektleitung. Ich führe Teams gerne ' +
+      'offen und transparent: mit klaren Projektvisionen, gelebter Feedbackkultur und respektvoller ' +
+      'Zusammenarbeit. Die Methode wähle ich passend zum Projekt, ob klassisch, agil oder hybrid.',
     title: 'Steckbrief',
     rows: [
       { icon: 'fa-user', label: 'Name', value: 'Jaron Illés' },
-      { icon: 'fa-cake-candles', label: 'Geburtsdatum', value: TBD },
-      { icon: 'fa-location-dot', label: 'Wohnort', value: TBD },
-      { icon: 'fa-language', label: 'Sprachen', value: TBD },
       { icon: 'fa-briefcase', label: 'Beruf', value: 'Product Owner, Management, Projektleitung' },
+      { icon: 'fa-diagram-project', label: 'Schwerpunkt', value: 'Projekt-, Programm- und Portfoliomanagement (P3)' },
+      { icon: 'fa-gears', label: 'Methoden', value: 'Agil, klassisch und hybrid (z. B. HERMES, Wasserfall)' },
+      { icon: 'fa-industry', label: 'Interessen', value: 'Smart Factory, KI' },
       { icon: 'fa-sailboat', label: 'Hobbys', value: 'Kochen, Verkaufen, Segeln' }
     ]
   },

@@ -39,13 +39,17 @@ export const CONTENT_EN = {
   photo: 'assets/images/jaron.webp',
 
   about: {
+    intro:
+      'I work as a Product Owner, in management and as a project leader. I like to lead teams openly ' +
+      'and transparently: with clear project visions, a lived feedback culture and respectful ' +
+      'collaboration. I choose the method to fit the project, whether classic, agile or hybrid.',
     title: 'Fact sheet',
     rows: [
       { icon: 'fa-user', label: 'Name', value: 'Jaron Illés' },
-      { icon: 'fa-cake-candles', label: 'Date of birth', value: TBD },
-      { icon: 'fa-location-dot', label: 'Location', value: TBD },
-      { icon: 'fa-language', label: 'Languages', value: TBD },
       { icon: 'fa-briefcase', label: 'Profession', value: 'Product Owner, Management, Project Leader' },
+      { icon: 'fa-diagram-project', label: 'Focus', value: 'Project, program and portfolio management (P3)' },
+      { icon: 'fa-gears', label: 'Methods', value: 'Agile, classic and hybrid (e.g. HERMES, waterfall)' },
+      { icon: 'fa-industry', label: 'Interests', value: 'Smart Factory, AI' },
       { icon: 'fa-sailboat', label: 'Hobbies', value: 'Cooking, Selling, Sailing' }
     ]
   },
