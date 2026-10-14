@@ -36,12 +36,9 @@ export const CONTENT_EN = {
   photo: 'assets/images/jaron.webp',
 
   about: {
-    intro: [TBD],
-    facts: [
-      { icon: 'fa-location-dot', label: 'Location', value: TBD },
-      { icon: 'fa-briefcase', label: 'Work', value: TBD },
-      { icon: 'fa-graduation-cap', label: 'Education', value: TBD },
-      { icon: 'fa-language', label: 'Languages', value: TBD }
+    sections: [
+      { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
+      { icon: 'fa-people-group', title: 'Management', text: TBD }
     ]
   },
 
@@ -100,98 +97,6 @@ export const CONTENT_EN = {
     { icon: 'fa-tags', title: 'Selling', text: TBD },
     { icon: 'fa-sailboat', title: 'Sailing', text: TBD }
   ],
-
-  // Source: "Osterwalder 24.09.2024.pptx" (assessment presentation, Osterwalder AG).
-  projectManagement: {
-    title: 'Project management',
-    subtitle: 'From my assessment presentation at Osterwalder AG, September 2024',
-
-    p3: {
-      title: 'P3 Management Office',
-      items: [
-        { icon: 'fa-diagram-project', name: 'Project Management Office' },
-        { icon: 'fa-layer-group', name: 'Program Management Office' },
-        { icon: 'fa-briefcase', name: 'Portfolio Management Office' }
-      ]
-    },
-
-    successFactors: {
-      title: 'Success factors for leading a project team',
-      groups: [
-        {
-          icon: 'fa-user',
-          name: 'Skills / People',
-          points: [
-            'Leadership / feedback culture / commitment / knowledge of methods',
-            'Clear project visions',
-            'A qualified and motivated team',
-            'Listen, understand, reflect back.',
-            'Collective and individual responsibility complement each other for shared success in the team.'
-          ]
-        },
-        {
-          icon: 'fa-handshake',
-          name: 'Collaboration & network',
-          points: [
-            'Good collaboration with everyone involved in the project',
-            'Connecting customers with decision makers and building transparent communication between them.',
-            'Make the best use of the know-how already in the company: project management becomes visible, with contact to the people on the ground.'
-          ]
-        },
-        {
-          icon: 'fa-people-group',
-          name: 'Culture',
-          points: [
-            'Respectful treatment within the team',
-            'Independent work with a culture of exchange',
-            'Customer-oriented thinking',
-            'Project management is open, and a transparent feedback culture is lived.',
-            'The suitability of goals and requirements is checked continuously: retrospective vs. planning.',
-            'Ongoing transparent communication with stakeholders and their bond with the team',
-            'A firm link to the company structure'
-          ]
-        },
-        {
-          icon: 'fa-gears',
-          name: 'Process',
-          points: [
-            'Projects follow the right process (Stacey matrix). There are standard methods such as waterfall, hybrid, agile, HERMES, etc.',
-            'Requirements are defined before the project starts (requirements specification), open questions are clarified, and every requirement has corresponding tests in the RTM.',
-            'Active risk management',
-            'Available capacity is matched with the workload (agility).',
-            'Finish to Start: projects must be completed before new ones are started.',
-            'Start to Finish: new projects must be started before old ones are finished.'
-          ]
-        }
-      ]
-    },
-
-    methods: {
-      title: 'Methods',
-      tags: [
-        'Stacey Matrix',
-        'Risk management',
-        'Magic triangle',
-        'Hermes-like project management',
-        'Waterfall / classic project management',
-        'Agile project management'
-      ],
-      backlog: {
-        title: 'Release and backlog',
-        points: [
-          'Product backlog items by budget and story points',
-          'Communication comes first',
-          'Variable scope',
-          'Scheduling'
-        ]
-      }
-    },
-
-    quote: {
-      text: 'If you’re not prepared to be wrong, you’ll never come up with anything original.',
-      author: 'Sir Ken Robinson'
-    }
-  }
 };
 
 export type SiteContent = typeof CONTENT_EN;

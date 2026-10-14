@@ -15,8 +15,4 @@ export class AboutComponent {
   get about() {
     return this.language.content.about;
   }
-
-  get pm() {
-    return this.language.content.projectManagement;
-  }
 }

@@ -85,31 +85,6 @@ $accent: #6BA8E0;
   }
 }
 
-.fact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  li {
-    display: flex;
-    gap: 0.75rem;
-    padding: 0.4rem 0;
-  }
-
-  i {
-    width: 1.2rem;
-    color: $primary;
-    text-align: center;
-    margin-top: 0.25rem;
-  }
-}
-
-.section-title {
-  margin: 2rem 0 1rem;
-  font-weight: 700;
-  color: $primary-dark;
-}
-
 .card-heading {
   font-weight: 700;
   color: $primary-dark;
@@ -117,41 +92,6 @@ $accent: #6BA8E0;
   i {
     color: $primary;
     margin-right: 0.4rem;
-  }
-}
-
-.point-list {
-  padding-left: 1.1rem;
-
-  li {
-    margin-bottom: 0.35rem;
-  }
-}
-
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tag {
-  padding: 0.3rem 0.8rem;
-  border-radius: 999px;
-  background: #eef4fb;
-  color: $primary-dark;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.quote {
-  margin: 2.5rem 0 1rem;
-  font-style: italic;
-  color: #7a7a7a;
-
-  footer {
-    margin-top: 0.4rem;
-    font-style: normal;
-    font-size: 0.85rem;
   }
 }
 
