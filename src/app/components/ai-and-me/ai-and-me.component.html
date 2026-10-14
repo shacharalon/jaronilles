@@ -1,0 +1,15 @@
+<h3 class="page-title text-center">{{ title }}</h3>
+<hr class="page-divider" />
+
+<div class="info-card mb-4">
+  <p class="mb-0">{{ ai.intro }}</p>
+</div>
+
+<div class="row g-3">
+  <div class="col-md-4" *ngFor="let s of ai.sections">
+    <div class="info-card h-100">
+      <h6 class="card-heading"><i class="fa-solid {{ s.icon }}"></i> {{ s.title }}</h6>
+      <p class="mb-0">{{ s.text }}</p>
+    </div>
+  </div>
+</div>

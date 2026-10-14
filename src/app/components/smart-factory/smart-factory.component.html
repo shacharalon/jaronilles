@@ -1,0 +1,21 @@
+<h3 class="page-title text-center">{{ title }}</h3>
+<hr class="page-divider" />
+
+<div class="info-card text-center mb-4">
+  <i class="fa-solid {{ factory.icon }} feature-icon"></i>
+  <p class="mb-0">{{ factory.intro }}</p>
+</div>
+
+<div class="row g-3 mb-4">
+  <div class="col-md-6 col-lg-4" *ngFor="let b of factory.blocks">
+    <div class="info-card h-100">
+      <h6 class="card-heading"><i class="fa-solid {{ b.icon }}"></i> {{ b.name }}</h6>
+      <p class="mb-0">{{ b.text }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="info-card">
+  <h6 class="card-heading">{{ ui.myView }}</h6>
+  <p class="mb-0">{{ factory.myView }}</p>
+</div>

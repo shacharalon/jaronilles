@@ -1,49 +1,100 @@
-// All editable text for the personal pages lives here.
-// "To be discussed" marks content that still has to be filled in.
-const TBD = 'To be discussed';
+// Deutsche Texte (Hochdeutsch, Schweizer Rechtschreibung: «ss» statt «ß»).
+// Muss dieselbe Struktur haben wie content.en.ts.
+// «Noch zu besprechen» markiert Inhalte, die noch ausgefüllt werden müssen.
+import { SiteContent } from './content.en';
 
-export const SITE_CONTENT = {
+const TBD = 'Noch zu besprechen';
+
+export const CONTENT_DE: SiteContent = {
+  ui: {
+    learnMore: 'Mehr erfahren',
+    whyIPicked: 'Warum ich es gewählt habe',
+    myView: 'Meine Sicht',
+    ingredients: 'Zutaten',
+    preparation: 'Zubereitung',
+    servings: 'Personen',
+    languageLabel: 'Sprache'
+  },
+
+  nav: {
+    main: 'Start',
+    about: 'Über mich',
+    smartFactory: 'Smart Factory',
+    technology: 'Technologie des Monats',
+    ai: 'KI und ich',
+    recipe: 'Rezept des Monats',
+    history: 'Rückblick',
+    hobbies: 'Hobbys'
+  },
+
   owner: 'Jaron Illés',
   tagline: TBD,
-  // Formal portrait shown on the Main page, e.g. 'assets/images/jaron.jpg'. Empty = no photo.
   photo: '',
 
   about: {
     intro: [TBD],
     facts: [
-      { icon: 'fa-location-dot', label: 'Location', value: TBD },
-      { icon: 'fa-briefcase', label: 'Work', value: TBD },
-      { icon: 'fa-graduation-cap', label: 'Education', value: TBD },
-      { icon: 'fa-language', label: 'Languages', value: TBD }
+      { icon: 'fa-location-dot', label: 'Wohnort', value: TBD },
+      { icon: 'fa-briefcase', label: 'Arbeit', value: TBD },
+      { icon: 'fa-graduation-cap', label: 'Ausbildung', value: TBD },
+      { icon: 'fa-language', label: 'Sprachen', value: TBD }
     ]
   },
 
-  technologyOfTheMonth: {
-    month: 'October 2026',
-    name: 'Smart Factory',
+  smartFactory: {
     icon: 'fa-industry',
-    description:
-      'A smart factory connects machines, sensors and software so that production can monitor, ' +
-      'analyse and adjust itself in real time. Typical building blocks are IoT sensors, ' +
-      'data platforms, automation and robotics, simulation (digital twins) and AI-based quality control.',
+    intro:
+      'Eine Smart Factory verbindet Maschinen, Sensoren und Software, sodass sich die Produktion ' +
+      'in Echtzeit überwachen, analysieren und anpassen kann.',
+    blocks: [
+      { icon: 'fa-wifi', name: 'IoT-Sensoren', text: 'Erfassen Live-Daten von Maschinen und Prozessen.' },
+      { icon: 'fa-database', name: 'Datenplattformen', text: 'Führen Produktionsdaten zusammen, damit sie analysiert werden können.' },
+      { icon: 'fa-robot', name: 'Automation und Robotik', text: 'Lassen Maschinen Routineschritte ausführen und anpassen.' },
+      { icon: 'fa-cube', name: 'Digitale Zwillinge', text: 'Simulieren Maschinen und Linien, bevor die echten verändert werden.' },
+      { icon: 'fa-eye', name: 'KI-gestützte Qualitätskontrolle', text: 'Erkennt Fehler und Auffälligkeiten früh und automatisch.' }
+    ],
+    myView: TBD
+  },
+
+  technologyOfTheMonth: {
+    month: TBD,
+    name: TBD,
+    icon: 'fa-microchip',
+    description: TBD,
     whyIPicked: TBD,
     link: ''
   },
 
-  // recipeName must match a recipe "name" in assets/recipes.json (falls back to the first recipe).
+  aiAndMe: {
+    intro: TBD,
+    sections: [
+      { icon: 'fa-lightbulb', title: 'Wie ich KI nutze', text: TBD },
+      { icon: 'fa-diagram-project', title: 'Projekte', text: TBD },
+      { icon: 'fa-comments', title: 'Meine Sicht', text: TBD }
+    ]
+  },
+
   recipeOfTheMonth: {
     month: TBD,
     recipeName: 'Pasta al Pomodoro',
     note: TBD
   },
 
+  history: {
+    recipesLabel: 'Rezepte',
+    technologyLabel: 'Technologie',
+    empty: 'Noch keine Einträge.',
+    recipes: [],
+    technology: []
+  },
+
   hobbies: [
-    { icon: 'fa-utensils', title: 'Cooking', text: TBD },
-    { icon: 'fa-tags', title: 'Selling', text: TBD },
-    { icon: 'fa-star', title: 'Hobby 3', text: TBD }
+    { icon: 'fa-utensils', title: 'Kochen', text: TBD },
+    { icon: 'fa-tags', title: 'Verkaufen', text: TBD },
+    { icon: 'fa-sailboat', title: 'Segeln', text: TBD }
   ],
 
-  // Source: "Osterwalder 24.09.2024.pptx" (assessment presentation, Osterwalder AG).
+  // Quelle: «Osterwalder 24.09.2024.pptx» (Assessment-Präsentation, Osterwalder AG).
   projectManagement: {
     title: 'Projektmanagement',
     subtitle: 'Aus meiner Assessment-Präsentation bei Osterwalder AG, September 2024',

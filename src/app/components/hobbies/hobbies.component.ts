@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
-import { SITE_CONTENT } from 'src/app/data/site-content';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-hobbies',
   templateUrl: './hobbies.component.html'
 })
 export class HobbiesComponent {
-  hobbies = SITE_CONTENT.hobbies;
+  constructor(private language: LanguageService) {}
+
+  get title() {
+    return this.language.content.nav.hobbies;
+  }
+
+  get hobbies() {
+    return this.language.content.hobbies;
+  }
 }

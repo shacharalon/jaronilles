@@ -1,11 +1,22 @@
 import { Component } from '@angular/core';
-import { SITE_CONTENT } from 'src/app/data/site-content';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html'
 })
 export class AboutComponent {
-  about = SITE_CONTENT.about;
-  pm = SITE_CONTENT.projectManagement;
+  constructor(private language: LanguageService) {}
+
+  get title() {
+    return this.language.content.nav.about;
+  }
+
+  get about() {
+    return this.language.content.about;
+  }
+
+  get pm() {
+    return this.language.content.projectManagement;
+  }
 }

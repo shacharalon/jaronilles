@@ -1,0 +1,6 @@
+# Always use LF line endings in the repository and on checkout
+* text=auto eol=lf
+*.ico binary
+*.jpg binary
+*.png binary
+*.woff2 binary

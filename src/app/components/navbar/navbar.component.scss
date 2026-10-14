@@ -101,3 +101,26 @@ $berry-dark:   #4A3570;
     justify-content: center;
   }
 }
+
+.lang-switch {
+  display: inline-flex;
+  margin-left: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-btn {
+  padding: 0.35rem 0.75rem;
+  border: 0;
+  background: transparent;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #555;
+  cursor: pointer;
+
+  &.active {
+    background: $paprika;
+    color: #ffffff;
+  }
+}

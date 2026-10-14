@@ -1,0 +1,80 @@
+{
+  "recipes": [
+    {
+      "name": "Crêpes (example)",
+      "image": "assets/images/crepes.jpg",
+      "description": "Thin, light crêpes for a quick breakfast.",
+      "category": "savory",
+      "ingredients": [
+        { "name": "Flour", "amount": 200, "unit": "g" },
+        { "name": "Melted butter", "amount": 25, "unit": "g" },
+        { "name": "Egg", "amount": 1, "unit": "pc" },
+        { "name": "Milk", "amount": 200, "unit": "ml" },
+        { "name": "Salt", "amount": 1, "unit": "pinch" }
+      ],
+      "servings": 2,
+      "time": "30 min",
+      "instructions": [
+        "Get all ingredients ready. Melt the butter over low heat and set aside.",
+        "Mix the flour and salt in a bowl and make a well in the middle.",
+        "Whisk the eggs and milk and pour them into the well. Stir from the centre outwards with a whisk. Gradually add the melted butter. Stir until the batter is smooth. Cover and let it rest for 30 minutes.",
+        "Heat a little frying butter in a non-stick pan. Add about half a ladle of batter so the bottom of the pan is thinly covered. Reduce the heat. Once the underside is cooked and comes away on its own, flip the crêpe, finish cooking and keep it warm under a lid. Repeat with the remaining batter."
+      ]
+    },
+    {
+      "name": "Pasta al Pomodoro",
+      "image": "assets/images/pasta.jpg",
+      "description": "Classic Italian pasta with homemade tomato sauce – simple, aromatic and irresistible.",
+      "category": "savory",
+      "ingredients": [
+        { "name": "Spaghetti", "amount": 400, "unit": "g" },
+        { "name": "Canned tomatoes (chopped)", "amount": 400, "unit": "g" },
+        { "name": "Garlic", "amount": 3, "unit": "cloves" },
+        { "name": "Olive oil", "amount": 4, "unit": "tbsp" },
+        { "name": "Fresh basil", "amount": 1, "unit": "handful" },
+        { "name": "Salt", "amount": 1, "unit": "pinch" },
+        { "name": "Sugar", "amount": 1, "unit": "tsp" },
+        { "name": "Parmesan (grated)", "amount": 50, "unit": "g" }
+      ],
+      "servings": 4,
+      "time": "25 min",
+      "instructions": [
+        "Bring a large pot of generously salted water to the boil.",
+        "Peel and finely chop the garlic. Warm the olive oil in a pan over medium heat and sauté the garlic for 1–2 minutes until golden.",
+        "Add the canned tomatoes and the sugar to the pan and simmer on low heat for 15 minutes until the sauce thickens. Season with salt.",
+        "Cook the spaghetti al dente according to the package instructions. Keep some of the cooking water, then drain the pasta.",
+        "Add the pasta to the tomato sauce and mix well. If needed, add a little cooking water to reach the desired consistency.",
+        "Serve with fresh basil and grated Parmesan."
+      ]
+    },
+    {
+      "name": "Blueberry muffins",
+      "image": "assets/images/muffins.jpg",
+      "description": "Juicy muffins with fresh blueberries – perfect for breakfast or as a sweet snack.",
+      "category": "dessert",
+      "ingredients": [
+        { "name": "Flour", "amount": 250, "unit": "g" },
+        { "name": "Sugar", "amount": 150, "unit": "g" },
+        { "name": "Baking powder", "amount": 2, "unit": "tsp" },
+        { "name": "Salt", "amount": 0.5, "unit": "tsp" },
+        { "name": "Egg", "amount": 2, "unit": "pc" },
+        { "name": "Milk", "amount": 180, "unit": "ml" },
+        { "name": "Vegetable oil", "amount": 80, "unit": "ml" },
+        { "name": "Vanilla extract", "amount": 1, "unit": "tsp" },
+        { "name": "Fresh blueberries", "amount": 200, "unit": "g" }
+      ],
+      "servings": 12,
+      "time": "35 min",
+      "instructions": [
+        "Preheat the oven to 190 °C (top and bottom heat). Line a muffin tin with 12 paper cases.",
+        "Mix the flour, sugar, baking powder and salt in a large bowl.",
+        "Whisk the eggs, milk, oil and vanilla extract in a separate bowl.",
+        "Add the wet ingredients to the dry ones and stir only until just combined – the batter may stay lumpy.",
+        "Gently fold in the blueberries.",
+        "Fill the cases evenly with batter (about ¾ full).",
+        "Bake in the preheated oven for 20–22 minutes, until a toothpick comes out clean.",
+        "Let cool in the tin for 5 minutes, then transfer to a wire rack."
+      ]
+    }
+  ]
+}
