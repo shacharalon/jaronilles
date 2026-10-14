@@ -1,101 +1,27 @@
-# Angular + Firebase – Getting Started
+# Cookbook
 
-Repository:  
-https://github.com/shacharalon/jaronilles.git
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
 
----
+## Development server
 
-## 1. Projekt holen
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-```bash
-git clone https://github.com/shacharalon/jaronilles.git
-cd jaronilles
-```
+## Code scaffolding
 
----
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## 2. Dependencies installieren
+## Build
 
-Einfach ausführen:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-```bash
-npm install
-```
+## Running unit tests
 
-Fertig ✔️
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
----
+## Running end-to-end tests
 
-## 3. Projekt lokal starten
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-```bash
-npm start
-```
+## Further help
 
-oder
-
-```bash
-ng serve
-```
-
-App läuft dann unter:
-
-http://localhost:4200
-
----
-
-## 4. Änderungen machen
-
-Code anpassen → speichern → Browser updated automatisch.
-
-Angular Doku:  
-https://angular.io/docs
-
-Wichtige Ordner:
-
-| Ordner | Bedeutung |
-|--------|----------|
-| src/app | Komponenten |
-| src/environments | Firebase Config (dont touch!) |
-| angular.json | Build Settings (dont touch) |
-
----
-
-## 5. Deploy auf Firebase
-
-Firebase ist bereits verbunden.
-
-Einfach:
-
-Login (nur einmal nötig mit deinem Konto):
-
-```bash
-firebase login
-```
-
-Build erstellen:
-"Dist" Orderner falls vorhanden löschen.
-
-```bash
-ng build
-```
-
-Deploy:
-
-```bash
-firebase deploy
-```
-
----
-
-## Quick Start
-
-```bash
-git clone https://github.com/shacharalon/jaronilles.git
-cd jaronilles
-npm install
-npm start
-ng build
-firebase login
-firebase deploy
-```
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
