@@ -1,0 +1,11 @@
+<h3 class="page-title text-center">{{ title }}</h3>
+<hr class="page-divider" />
+
+<div class="row g-4">
+  <div class="col-md-6" *ngFor="let s of profession.sections">
+    <div class="info-card h-100">
+      <h5 class="card-heading"><i class="fa-solid {{ s.icon }}"></i> {{ s.title }}</h5>
+      <p class="mb-0">{{ s.text }}</p>
+    </div>
+  </div>
+</div>

@@ -30,6 +30,7 @@ export class NavbarComponent {
       this.tabsCache = [
         { link: '/', label: nav.main, icon: 'fa-house', exact: true },
         { link: '/about', label: nav.about, icon: 'fa-user', exact: false },
+        { link: '/profession', label: nav.profession, icon: 'fa-briefcase', exact: false },
         { link: '/smart-factory', label: nav.smartFactory, icon: 'fa-industry', exact: false },
         { link: '/technology', label: nav.technology, icon: 'fa-microchip', exact: false },
         { link: '/ai-and-me', label: nav.ai, icon: 'fa-robot', exact: false },

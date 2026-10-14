@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { ProfessionComponent } from './components/profession/profession.component';
 import { SmartFactoryComponent } from './components/smart-factory/smart-factory.component';
 import { TechnologyComponent } from './components/technology/technology.component';
 import { AiAndMeComponent } from './components/ai-and-me/ai-and-me.component';
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
+    ProfessionComponent,
     SmartFactoryComponent,
     TechnologyComponent,
     AiAndMeComponent,

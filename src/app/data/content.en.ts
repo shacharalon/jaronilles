@@ -23,6 +23,7 @@ export const CONTENT_EN = {
   nav: {
     main: 'Main',
     about: 'About me',
+    profession: 'Profession',
     smartFactory: 'Smart Factory',
     technology: 'Technology of the month',
     ai: 'AI and me',
@@ -39,6 +40,15 @@ export const CONTENT_EN = {
     sections: [
       { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
       { icon: 'fa-people-group', title: 'Management', text: TBD }
+    ]
+  },
+
+  profession: {
+    sections: [
+      { icon: 'fa-briefcase', title: 'Current position', text: TBD },
+      { icon: 'fa-timeline', title: 'Experience', text: TBD },
+      { icon: 'fa-screwdriver-wrench', title: 'Skills', text: TBD },
+      { icon: 'fa-graduation-cap', title: 'Education', text: TBD }
     ]
   },
 

@@ -23,7 +23,7 @@ export class HomeComponent {
       this.navCache = nav;
       this.tilesCache = [
         { link: '/about', icon: 'fa-user', title: nav.about },
-        null,
+        { link: '/profession', icon: 'fa-briefcase', title: nav.profession },
         { link: '/recipe-of-the-month', icon: 'fa-bowl-food', title: nav.recipe },
         { link: '/ai-and-me', icon: 'fa-robot', title: nav.ai },
         { link: '/smart-factory', icon: 'fa-industry', title: nav.smartFactory },

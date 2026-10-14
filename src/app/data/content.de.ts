@@ -19,6 +19,7 @@ export const CONTENT_DE: SiteContent = {
   nav: {
     main: 'Start',
     about: 'Über mich',
+    profession: 'Beruf',
     smartFactory: 'Smart Factory',
     technology: 'Technologie des Monats',
     ai: 'KI und ich',
@@ -34,6 +35,15 @@ export const CONTENT_DE: SiteContent = {
     sections: [
       { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
       { icon: 'fa-people-group', title: 'Management', text: TBD }
+    ]
+  },
+
+  profession: {
+    sections: [
+      { icon: 'fa-briefcase', title: 'Aktuelle Stelle', text: TBD },
+      { icon: 'fa-timeline', title: 'Erfahrung', text: TBD },
+      { icon: 'fa-screwdriver-wrench', title: 'Fähigkeiten', text: TBD },
+      { icon: 'fa-graduation-cap', title: 'Ausbildung', text: TBD }
     ]
   },
 
