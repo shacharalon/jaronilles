@@ -18,17 +18,26 @@ export class NavbarComponent {
     return this.language.content.owner;
   }
 
+  private navCache?: object;
+  private tabsCache: { link: string; label: string; icon: string; exact: boolean }[] = [];
+
+  // Must return the same array until the language changes. A new array on every change
+  // detection makes ngFor rebuild the links endlessly and freezes the page.
   get tabs() {
     const nav = this.language.content.nav;
-    return [
-      { link: '/', label: nav.main, icon: 'fa-house', exact: true },
-      { link: '/about', label: nav.about, icon: 'fa-user', exact: false },
-      { link: '/smart-factory', label: nav.smartFactory, icon: 'fa-industry', exact: false },
-      { link: '/technology', label: nav.technology, icon: 'fa-microchip', exact: false },
-      { link: '/ai-and-me', label: nav.ai, icon: 'fa-robot', exact: false },
-      { link: '/recipe-of-the-month', label: nav.recipe, icon: 'fa-bowl-food', exact: false },
-      { link: '/history', label: nav.history, icon: 'fa-clock-rotate-left', exact: false },
-      { link: '/hobbies', label: nav.hobbies, icon: 'fa-sailboat', exact: false }
-    ];
+    if (nav !== this.navCache) {
+      this.navCache = nav;
+      this.tabsCache = [
+        { link: '/', label: nav.main, icon: 'fa-house', exact: true },
+        { link: '/about', label: nav.about, icon: 'fa-user', exact: false },
+        { link: '/smart-factory', label: nav.smartFactory, icon: 'fa-industry', exact: false },
+        { link: '/technology', label: nav.technology, icon: 'fa-microchip', exact: false },
+        { link: '/ai-and-me', label: nav.ai, icon: 'fa-robot', exact: false },
+        { link: '/recipe-of-the-month', label: nav.recipe, icon: 'fa-bowl-food', exact: false },
+        { link: '/history', label: nav.history, icon: 'fa-clock-rotate-left', exact: false },
+        { link: '/hobbies', label: nav.hobbies, icon: 'fa-sailboat', exact: false }
+      ];
+    }
+    return this.tabsCache;
   }
 }

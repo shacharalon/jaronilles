@@ -12,16 +12,24 @@ export class HomeComponent {
     return this.language.content;
   }
 
+  private navCache?: object;
+  private tilesCache: { link: string; icon: string; title: string }[] = [];
+
+  // Same array until the language changes (a new array every cycle would make ngFor rebuild forever).
   get tiles() {
     const nav = this.language.content.nav;
-    return [
-      { link: '/about', icon: 'fa-user', title: nav.about },
-      { link: '/smart-factory', icon: 'fa-industry', title: nav.smartFactory },
-      { link: '/technology', icon: 'fa-microchip', title: nav.technology },
-      { link: '/ai-and-me', icon: 'fa-robot', title: nav.ai },
-      { link: '/recipe-of-the-month', icon: 'fa-bowl-food', title: nav.recipe },
-      { link: '/history', icon: 'fa-clock-rotate-left', title: nav.history },
-      { link: '/hobbies', icon: 'fa-sailboat', title: nav.hobbies }
-    ];
+    if (nav !== this.navCache) {
+      this.navCache = nav;
+      this.tilesCache = [
+        { link: '/about', icon: 'fa-user', title: nav.about },
+        { link: '/smart-factory', icon: 'fa-industry', title: nav.smartFactory },
+        { link: '/technology', icon: 'fa-microchip', title: nav.technology },
+        { link: '/ai-and-me', icon: 'fa-robot', title: nav.ai },
+        { link: '/recipe-of-the-month', icon: 'fa-bowl-food', title: nav.recipe },
+        { link: '/history', icon: 'fa-clock-rotate-left', title: nav.history },
+        { link: '/hobbies', icon: 'fa-sailboat', title: nav.hobbies }
+      ];
+    }
+    return this.tilesCache;
   }
 }
