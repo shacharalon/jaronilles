@@ -1,0 +1,14 @@
+<h3 class="page-title text-center">Technology of the month</h3>
+<hr class="page-divider" />
+
+<div class="info-card text-center">
+  <i class="fa-solid {{ tech.icon }} feature-icon"></i>
+  <p class="text-muted mb-1">{{ tech.month }}</p>
+  <h2>{{ tech.name }}</h2>
+  <p>{{ tech.description }}</p>
+  <h6 class="mt-4">Why I picked it</h6>
+  <p>{{ tech.whyIPicked }}</p>
+  <a *ngIf="tech.link" class="btn btn-outline-secondary btn-sm" [href]="tech.link" target="_blank" rel="noopener">
+    Learn more
+  </a>
+</div>

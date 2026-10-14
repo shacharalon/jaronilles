@@ -30,6 +30,8 @@ $berry-dark:   #4A3570;
 }
 
 .navbar-links {
+  flex-wrap: wrap;
+  justify-content: flex-end;
   display: flex;
   align-items: center;
   gap: 0.5rem;

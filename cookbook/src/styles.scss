@@ -1,3 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/scss/bootstrap";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
+
+/* Shared styles for the personal pages */
+$paprika: #D2452D;
+$paprika-dark: #A33422;
+$paprika-accent: #F9A45A;
+
+.page-title {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: $paprika-dark;
+  margin-top: 1.5rem;
+}
+
+.page-divider {
+  width: 80px;
+  height: 3px;
+  border: 0;
+  margin: 0.5rem auto 2rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, $paprika, $paprika-accent);
+  opacity: 1;
+}
+
+.info-card {
+  display: block;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  color: #3f3f3f;
+  text-decoration: none;
+}
+
+.feature-icon {
+  font-size: 2.2rem;
+  color: $paprika;
+  margin-bottom: 0.75rem;
+}
+
+.hero {
+  padding: 3rem 0 1.5rem;
+}
+
+.hero-title {
+  font-weight: 800;
+  color: $paprika-dark;
+}
+
+.hero-tagline {
+  color: #7a7a7a;
+}
+
+.tile-card {
+  text-align: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+  i {
+    display: block;
+    width: auto;
+    font-size: 1.8rem;
+    color: $paprika;
+    margin-bottom: 0.5rem;
+  }
+
+  span {
+    font-weight: 600;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.fact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.4rem 0;
+  }
+
+  i {
+    width: 1.2rem;
+    color: $paprika;
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+}
+
+/* Cookbook sub-tabs */
+.nav-pills .nav-link {
+  color: $paprika-dark;
+
+  &.active {
+    background-color: $paprika;
+    color: #fff;
+  }
+}

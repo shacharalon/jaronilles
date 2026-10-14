@@ -1,0 +1,20 @@
+<h3 class="page-title text-center">About me</h3>
+<hr class="page-divider" />
+
+<div class="row g-4">
+  <div class="col-md-7">
+    <div class="info-card">
+      <p *ngFor="let p of about.intro">{{ p }}</p>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="info-card">
+      <ul class="fact-list">
+        <li *ngFor="let f of about.facts">
+          <i class="fa-solid {{ f.icon }}"></i>
+          <span><strong>{{ f.label }}:</strong> {{ f.value }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

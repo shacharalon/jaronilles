@@ -1,26 +1,19 @@
 <nav class="cookbook-navbar">
   <div class="navbar-brand">
     <i class="fa-solid fa-book-open"></i>
-    <span>Mein Kochbuch</span>
+    <span>{{ owner }}</span>
   </div>
 
   <div class="navbar-links">
     <a
-      routerLink="/recipes"
+      *ngFor="let tab of tabs"
+      [routerLink]="tab.link"
       routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: tab.exact }"
       class="nav-link savory-link"
     >
-      <i class="fa-solid fa-utensils"></i>
-      Herzhafte Gerichte
-    </a>
-
-    <a
-      routerLink="/desserts"
-      routerLinkActive="active"
-      class="nav-link dessert-link"
-    >
-      <i class="fa-solid fa-cake-candles"></i>
-      Desserts
+      <i class="fa-solid {{ tab.icon }}"></i>
+      {{ tab.label }}
     </a>
   </div>
 </nav>
