@@ -3,8 +3,10 @@
 const TBD = 'To be discussed';
 
 export const SITE_CONTENT = {
-  owner: 'Jaron Illes',
+  owner: 'Jaron Illés',
   tagline: TBD,
+  // Formal portrait shown on the Main page, e.g. 'assets/images/jaron.jpg'. Empty = no photo.
+  photo: '',
 
   about: {
     intro: [TBD],
@@ -17,10 +19,13 @@ export const SITE_CONTENT = {
   },
 
   technologyOfTheMonth: {
-    month: TBD,
-    name: TBD,
-    icon: 'fa-microchip',
-    description: TBD,
+    month: 'October 2026',
+    name: 'Smart Factory',
+    icon: 'fa-industry',
+    description:
+      'A smart factory connects machines, sensors and software so that production can monitor, ' +
+      'analyse and adjust itself in real time. Typical building blocks are IoT sensors, ' +
+      'data platforms, automation and robotics, simulation (digital twins) and AI-based quality control.',
     whyIPicked: TBD,
     link: ''
   },
@@ -34,7 +39,7 @@ export const SITE_CONTENT = {
 
   hobbies: [
     { icon: 'fa-utensils', title: 'Cooking', text: TBD },
-    { icon: 'fa-star', title: 'Hobby 2', text: TBD },
+    { icon: 'fa-tags', title: 'Selling', text: TBD },
     { icon: 'fa-star', title: 'Hobby 3', text: TBD }
   ],
 
@@ -122,80 +127,6 @@ export const SITE_CONTENT = {
           'Zeitplanung'
         ]
       }
-    },
-
-    startPlan: {
-      title: 'Startaktivitäten im ersten Halbjahr',
-      months: [
-        {
-          month: 'Monat 1',
-          title: 'Team und Projekt',
-          points: [
-            'Einzelgespräche mit Teammitgliedern führen.',
-            'Analyse der Team-Stärken und -Schwächen.',
-            'Identifizieren von Verbesserungsbereichen.',
-            'Überblick über laufende Projekte erstellen.',
-            'Arbeitsumfeld und Prozesse kennenlernen.',
-            'Analyse des Projektmanagements.'
-          ]
-        },
-        {
-          month: 'Monat 2',
-          title: 'Testing Team & QA Prozess',
-          points: [
-            'Wer: Testing Team kennenlernen',
-            'Wie: aktuelle Testmethoden und Prozesse',
-            'Wo: auf der Maschine? In der Simulation?',
-            'Was: manuell oder automatisiert testen',
-            'Wieso: Wer ist der Auftraggeber?',
-            'Wann: Auf welchem Zeitstand des Features, des Produkts testen wir?'
-          ]
-        },
-        {
-          month: 'Monat 3',
-          title: 'Produktportfolio / Mitbewerber',
-          points: [
-            'Das Produktportfolio kennenlernen.',
-            'Einen Überblick über die Montage der Maschinen erhalten.',
-            'Analyse der Stärken und Schwächen der einzelnen Produkte.',
-            'Stärken und Schwächen der Mitbewerber vergleichen und daraus unseren «Added Value» im Markt herausziehen.',
-            'Die gewonnenen Erkenntnisse in zukünftige Projekte integrieren.'
-          ]
-        },
-        {
-          month: 'Monat 4',
-          title: 'Kundenmanagement',
-          points: [
-            'Kunden kennenlernen.',
-            'Kundenbesuche durchführen.',
-            'Kundenfeedback zu Produkten einholen.',
-            'Kritische Kunden vs. Key-Kunden und weniger erfolgreiche Projekte analysieren.',
-            'Positives und Herausforderungen auswerten und Erkenntnisse umsetzen.'
-          ]
-        },
-        {
-          month: 'Monat 5',
-          title: 'Implement RTM / Reporting / Feedback',
-          points: [
-            'Pflichten-/Lastenheft erlernen.',
-            'Analyse der anforderungsbezogenen Tests im Test-Team gewinnen.',
-            'RTM erstellen.',
-            'Test-Matrix anpassen, damit automatisierte und manuelle Tests effizient verwaltet werden.',
-            'Reporting erstellen.'
-          ]
-        },
-        {
-          month: 'Monat 6',
-          title: 'Retrospektive',
-          points: [
-            'Gemeinsam mit Management und Team überprüfen, ob alles im Soll ist, und festlegen, wie es weitergeht.',
-            'Arbeitsmethoden wie Dailys / Weeklys, Feedbackkultur, Reporting-System',
-            'Schwächen und Stärken sind erkannt, Massnahmen umgesetzt oder geplant.',
-            'Ausserordentliche Projekte erkennen.',
-            'Weitere Optimierungen erkennen und die daraus folgenden Aufgaben verteilen.'
-          ]
-        }
-      ]
     },
 
     quote: {

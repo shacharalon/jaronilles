@@ -47,6 +47,16 @@ $paprika-accent: #F9A45A;
   padding: 3rem 0 1.5rem;
 }
 
+.hero-photo {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
 .hero-title {
   font-weight: 800;
   color: $paprika-dark;
@@ -134,18 +144,6 @@ $paprika-accent: #F9A45A;
   color: $paprika-dark;
   font-size: 0.85rem;
   font-weight: 600;
-}
-
-.month-badge {
-  display: inline-block;
-  padding: 0.15rem 0.7rem;
-  border-radius: 999px;
-  background: $paprika;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 .quote {
