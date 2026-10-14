@@ -32,9 +32,8 @@ export const CONTENT_EN = {
   },
 
   owner: 'Jaron Illés',
-  tagline: TBD,
   // Formal portrait shown on the Main page, e.g. 'assets/images/jaron.jpg'. Empty = no photo.
-  photo: '',
+  photo: 'assets/images/jaron.webp',
 
   about: {
     intro: [TBD],

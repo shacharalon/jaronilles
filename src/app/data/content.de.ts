@@ -28,8 +28,7 @@ export const CONTENT_DE: SiteContent = {
   },
 
   owner: 'Jaron Illés',
-  tagline: TBD,
-  photo: '',
+  photo: 'assets/images/jaron.webp',
 
   about: {
     intro: [TBD],
