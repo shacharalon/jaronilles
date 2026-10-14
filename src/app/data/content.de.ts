@@ -8,6 +8,7 @@ const TBD = 'Noch zu besprechen';
 export const CONTENT_DE: SiteContent = {
   ui: {
     learnMore: 'Mehr erfahren',
+    openMap: 'Karte öffnen',
     whyIPicked: 'Warum ich es gewählt habe',
     myView: 'Meine Sicht',
     ingredients: 'Zutaten',
@@ -25,25 +26,30 @@ export const CONTENT_DE: SiteContent = {
     ai: 'KI und ich',
     recipe: 'Rezept des Monats',
     history: 'Rückblick',
-    hobbies: 'Hobbys'
+    hobbies: 'Hobbys',
+    nextHike: 'Nächste Wanderung'
   },
 
   owner: 'Jaron Illés',
   photo: 'assets/images/jaron.webp',
 
   about: {
-    sections: [
-      { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
-      { icon: 'fa-people-group', title: 'Management', text: TBD }
+    title: 'Steckbrief',
+    rows: [
+      { icon: 'fa-user', label: 'Name', value: 'Jaron Illés' },
+      { icon: 'fa-cake-candles', label: 'Geburtsdatum', value: TBD },
+      { icon: 'fa-location-dot', label: 'Wohnort', value: TBD },
+      { icon: 'fa-language', label: 'Sprachen', value: TBD },
+      { icon: 'fa-briefcase', label: 'Beruf', value: 'Product Owner, Management, Projektleitung' },
+      { icon: 'fa-sailboat', label: 'Hobbys', value: 'Kochen, Verkaufen, Segeln' }
     ]
   },
 
   profession: {
     sections: [
-      { icon: 'fa-briefcase', title: 'Aktuelle Stelle', text: TBD },
-      { icon: 'fa-timeline', title: 'Erfahrung', text: TBD },
-      { icon: 'fa-screwdriver-wrench', title: 'Fähigkeiten', text: TBD },
-      { icon: 'fa-graduation-cap', title: 'Ausbildung', text: TBD }
+      { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
+      { icon: 'fa-people-group', title: 'Management', text: TBD },
+      { icon: 'fa-diagram-project', title: 'Projektleitung', text: TBD }
     ]
   },
 
@@ -92,6 +98,18 @@ export const CONTENT_DE: SiteContent = {
     empty: 'Noch keine Einträge.',
     recipes: [],
     technology: []
+  },
+
+  nextHike: {
+    question: 'Wo ist meine nächste Wanderung?',
+    rows: [
+      { icon: 'fa-mountain', label: 'Wo', value: TBD },
+      { icon: 'fa-calendar-days', label: 'Wann', value: TBD },
+      { icon: 'fa-route', label: 'Distanz', value: TBD },
+      { icon: 'fa-clock', label: 'Dauer', value: TBD },
+      { icon: 'fa-note-sticky', label: 'Hinweise', value: TBD }
+    ],
+    mapLink: ''
   },
 
   hobbies: [

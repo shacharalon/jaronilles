@@ -12,6 +12,7 @@ export interface HistoryEntry {
 export const CONTENT_EN = {
   ui: {
     learnMore: 'Learn more',
+    openMap: 'Open map',
     whyIPicked: 'Why I picked it',
     myView: 'My view',
     ingredients: 'Ingredients',
@@ -29,7 +30,8 @@ export const CONTENT_EN = {
     ai: 'AI and me',
     recipe: 'Recipe of the month',
     history: 'History',
-    hobbies: 'Hobbies'
+    hobbies: 'Hobbies',
+    nextHike: 'Next hike'
   },
 
   owner: 'Jaron Illés',
@@ -37,18 +39,22 @@ export const CONTENT_EN = {
   photo: 'assets/images/jaron.webp',
 
   about: {
-    sections: [
-      { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
-      { icon: 'fa-people-group', title: 'Management', text: TBD }
+    title: 'Fact sheet',
+    rows: [
+      { icon: 'fa-user', label: 'Name', value: 'Jaron Illés' },
+      { icon: 'fa-cake-candles', label: 'Date of birth', value: TBD },
+      { icon: 'fa-location-dot', label: 'Location', value: TBD },
+      { icon: 'fa-language', label: 'Languages', value: TBD },
+      { icon: 'fa-briefcase', label: 'Profession', value: 'Product Owner, Management, Project Leader' },
+      { icon: 'fa-sailboat', label: 'Hobbies', value: 'Cooking, Selling, Sailing' }
     ]
   },
 
   profession: {
     sections: [
-      { icon: 'fa-briefcase', title: 'Current position', text: TBD },
-      { icon: 'fa-timeline', title: 'Experience', text: TBD },
-      { icon: 'fa-screwdriver-wrench', title: 'Skills', text: TBD },
-      { icon: 'fa-graduation-cap', title: 'Education', text: TBD }
+      { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
+      { icon: 'fa-people-group', title: 'Management', text: TBD },
+      { icon: 'fa-diagram-project', title: 'Project Leader', text: TBD }
     ]
   },
 
@@ -100,6 +106,19 @@ export const CONTENT_EN = {
     empty: 'No entries yet.',
     recipes: [] as HistoryEntry[],
     technology: [] as HistoryEntry[]
+  },
+
+  nextHike: {
+    question: 'Where is my next hike?',
+    rows: [
+      { icon: 'fa-mountain', label: 'Where', value: TBD },
+      { icon: 'fa-calendar-days', label: 'When', value: TBD },
+      { icon: 'fa-route', label: 'Distance', value: TBD },
+      { icon: 'fa-clock', label: 'Duration', value: TBD },
+      { icon: 'fa-note-sticky', label: 'Notes', value: TBD }
+    ],
+    // Link to a map (e.g. Google Maps or SchweizMobil). Empty = no button.
+    mapLink: ''
   },
 
   hobbies: [

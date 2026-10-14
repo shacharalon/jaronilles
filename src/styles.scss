@@ -95,6 +95,45 @@ $accent: #6BA8E0;
   }
 }
 
+.fact-sheet {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.fact-rows {
+  margin: 0;
+}
+
+.fact-row {
+  display: flex;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+
+  dt {
+    flex: 0 0 11rem;
+    font-weight: 600;
+    color: $primary-dark;
+
+    i {
+      width: 1.3rem;
+      color: $primary;
+    }
+  }
+
+  dd {
+    flex: 1;
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .fact-row {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+}
+
 /* Cookbook sub-tabs */
 .nav-pills .nav-link {
   color: $primary-dark;

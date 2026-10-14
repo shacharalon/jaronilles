@@ -35,6 +35,7 @@ export class NavbarComponent {
         { link: '/technology', label: nav.technology, icon: 'fa-microchip', exact: false },
         { link: '/ai-and-me', label: nav.ai, icon: 'fa-robot', exact: false },
         { link: '/recipe-of-the-month', label: nav.recipe, icon: 'fa-bowl-food', exact: false },
+        { link: '/next-hike', label: nav.nextHike, icon: 'fa-person-hiking', exact: false },
         { link: '/history', label: nav.history, icon: 'fa-clock-rotate-left', exact: false },
         { link: '/hobbies', label: nav.hobbies, icon: 'fa-sailboat', exact: false }
       ];

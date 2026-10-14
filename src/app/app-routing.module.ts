@@ -9,6 +9,7 @@ import { AiAndMeComponent } from './components/ai-and-me/ai-and-me.component';
 import { RecipeOfMonthComponent } from './components/recipe-of-month/recipe-of-month.component';
 import { HistoryComponent } from './components/history/history.component';
 import { HobbiesComponent } from './components/hobbies/hobbies.component';
+import { NextHikeComponent } from './components/next-hike/next-hike.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'recipe-of-the-month', component: RecipeOfMonthComponent },
   { path: 'history', component: HistoryComponent },
   { path: 'hobbies', component: HobbiesComponent },
+  { path: 'next-hike', component: NextHikeComponent },
   { path: '**', redirectTo: '' }
 ];
 

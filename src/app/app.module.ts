@@ -13,6 +13,7 @@ import { AiAndMeComponent } from './components/ai-and-me/ai-and-me.component';
 import { RecipeOfMonthComponent } from './components/recipe-of-month/recipe-of-month.component';
 import { HistoryComponent } from './components/history/history.component';
 import { HobbiesComponent } from './components/hobbies/hobbies.component';
+import { NextHikeComponent } from './components/next-hike/next-hike.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     AiAndMeComponent,
     RecipeOfMonthComponent,
     HistoryComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    NextHikeComponent
   ],
   imports: [
     BrowserModule,

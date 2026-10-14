@@ -1,0 +1,15 @@
+<h3 class="page-title text-center">{{ title }}</h3>
+<hr class="page-divider" />
+
+<div class="info-card fact-sheet">
+  <h5 class="card-heading mb-3"><i class="fa-solid fa-person-hiking"></i> {{ hike.question }}</h5>
+  <dl class="fact-rows">
+    <div class="fact-row" *ngFor="let r of hike.rows">
+      <dt><i class="fa-solid {{ r.icon }}"></i> {{ r.label }}</dt>
+      <dd>{{ r.value }}</dd>
+    </div>
+  </dl>
+  <a *ngIf="hike.mapLink" class="btn btn-outline-secondary btn-sm mt-2" [href]="hike.mapLink" target="_blank" rel="noopener">
+    {{ ui.openMap }}
+  </a>
+</div>

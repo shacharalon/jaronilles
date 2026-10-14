@@ -29,7 +29,7 @@ export class HomeComponent {
         { link: '/smart-factory', icon: 'fa-industry', title: nav.smartFactory },
         { link: '/technology', icon: 'fa-microchip', title: nav.technology },
         { link: '/hobbies', icon: 'fa-sailboat', title: nav.hobbies },
-        null,
+        { link: '/next-hike', icon: 'fa-person-hiking', title: nav.nextHike },
         { link: '/history', icon: 'fa-clock-rotate-left', title: nav.history }
       ];
     }

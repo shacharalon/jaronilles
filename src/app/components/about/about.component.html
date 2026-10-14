@@ -1,11 +1,12 @@
 <h3 class="page-title text-center">{{ title }}</h3>
 <hr class="page-divider" />
 
-<div class="row g-4">
-  <div class="col-md-6" *ngFor="let s of about.sections">
-    <div class="info-card h-100">
-      <h5 class="card-heading"><i class="fa-solid {{ s.icon }}"></i> {{ s.title }}</h5>
-      <p class="mb-0">{{ s.text }}</p>
+<div class="info-card fact-sheet">
+  <h5 class="card-heading mb-3">{{ about.title }}</h5>
+  <dl class="fact-rows">
+    <div class="fact-row" *ngFor="let r of about.rows">
+      <dt><i class="fa-solid {{ r.icon }}"></i> {{ r.label }}</dt>
+      <dd>{{ r.value }}</dd>
     </div>
-  </div>
+  </dl>
 </div>
