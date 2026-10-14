@@ -4,10 +4,14 @@
 </section>
 
 <div class="row g-4 justify-content-center mt-2">
-  <div class="col-sm-6 col-lg-4" *ngFor="let tile of tiles">
-    <a class="info-card tile-card" [routerLink]="tile.link">
-      <i class="fa-solid {{ tile.icon }}"></i>
-      <span>{{ tile.title }}</span>
-    </a>
-  </div>
+  <ng-container *ngFor="let tile of tiles">
+    <div class="col-sm-6 col-md-4" *ngIf="tile; else gap">
+      <a class="info-card tile-card" [routerLink]="tile.link">
+        <i class="fa-solid {{ tile.icon }}"></i>
+        <span>{{ tile.title }}</span>
+      </a>
+    </div>
+    <!-- empty space, only on wide screens -->
+    <ng-template #gap><div class="col-md-4 d-none d-md-block"></div></ng-template>
+  </ng-container>
 </div>

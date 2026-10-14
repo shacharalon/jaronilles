@@ -1,7 +1,5 @@
-$paprika:      #D2452D;
-$paprika-dark: #A33422;
-$berry:        #6B4F9E;
-$berry-dark:   #4A3570;
+$primary:      #2F6FB0;
+$primary-dark: #1F3A5F;
 
 .cookbook-navbar {
   display: flex;
@@ -20,11 +18,11 @@ $berry-dark:   #4A3570;
   gap: 0.5rem;
   font-weight: 800;
   font-size: 1.1rem;
-  color: $paprika-dark;
+  color: $primary-dark;
   letter-spacing: 0.04em;
 
   i {
-    color: $paprika;
+    color: $primary;
     font-size: 1.2rem;
   }
 }
@@ -61,26 +59,11 @@ $berry-dark:   #4A3570;
 
 .savory-link {
   &:hover {
-    background: $paprika;
+    background: $primary;
   }
 
   &.active {
-    background: $paprika;
-    color: #ffffff;
-
-    i {
-      color: #ffffff;
-    }
-  }
-}
-
-.dessert-link {
-  &:hover {
-    background: $berry;
-  }
-
-  &.active {
-    background: $berry;
+    background: $primary;
     color: #ffffff;
 
     i {
@@ -120,7 +103,7 @@ $berry-dark:   #4A3570;
   cursor: pointer;
 
   &.active {
-    background: $paprika;
+    background: $primary;
     color: #ffffff;
   }
 }

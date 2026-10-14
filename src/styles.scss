@@ -3,16 +3,16 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
 /* Shared styles for the personal pages */
-$paprika: #D2452D;
-$paprika-dark: #A33422;
-$paprika-accent: #F9A45A;
+$primary: #2F6FB0;
+$primary-dark: #1F3A5F;
+$accent: #6BA8E0;
 
 .page-title {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.85rem;
-  color: $paprika-dark;
+  color: $primary-dark;
   margin-top: 1.5rem;
 }
 
@@ -22,7 +22,7 @@ $paprika-accent: #F9A45A;
   border: 0;
   margin: 0.5rem auto 2rem;
   border-radius: 999px;
-  background: linear-gradient(90deg, $paprika, $paprika-accent);
+  background: linear-gradient(90deg, $primary, $accent);
   opacity: 1;
 }
 
@@ -39,7 +39,7 @@ $paprika-accent: #F9A45A;
 
 .feature-icon {
   font-size: 2.2rem;
-  color: $paprika;
+  color: $primary;
   margin-bottom: 0.75rem;
 }
 
@@ -56,7 +56,7 @@ $paprika-accent: #F9A45A;
 
 .hero-title {
   font-weight: 800;
-  color: $paprika-dark;
+  color: $primary-dark;
 }
 
 .hero-tagline {
@@ -71,7 +71,7 @@ $paprika-accent: #F9A45A;
     display: block;
     width: auto;
     font-size: 1.8rem;
-    color: $paprika;
+    color: $primary;
     margin-bottom: 0.5rem;
   }
 
@@ -98,7 +98,7 @@ $paprika-accent: #F9A45A;
 
   i {
     width: 1.2rem;
-    color: $paprika;
+    color: $primary;
     text-align: center;
     margin-top: 0.25rem;
   }
@@ -107,15 +107,15 @@ $paprika-accent: #F9A45A;
 .section-title {
   margin: 2rem 0 1rem;
   font-weight: 700;
-  color: $paprika-dark;
+  color: $primary-dark;
 }
 
 .card-heading {
   font-weight: 700;
-  color: $paprika-dark;
+  color: $primary-dark;
 
   i {
-    color: $paprika;
+    color: $primary;
     margin-right: 0.4rem;
   }
 }
@@ -137,8 +137,8 @@ $paprika-accent: #F9A45A;
 .tag {
   padding: 0.3rem 0.8rem;
   border-radius: 999px;
-  background: #fff6f2;
-  color: $paprika-dark;
+  background: #eef4fb;
+  color: $primary-dark;
   font-size: 0.85rem;
   font-weight: 600;
 }
@@ -157,10 +157,10 @@ $paprika-accent: #F9A45A;
 
 /* Cookbook sub-tabs */
 .nav-pills .nav-link {
-  color: $paprika-dark;
+  color: $primary-dark;
 
   &.active {
-    background-color: $paprika;
+    background-color: $primary;
     color: #fff;
   }
 }
