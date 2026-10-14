@@ -97,6 +97,69 @@ $paprika-accent: #F9A45A;
   }
 }
 
+.section-title {
+  margin: 2rem 0 1rem;
+  font-weight: 700;
+  color: $paprika-dark;
+}
+
+.card-heading {
+  font-weight: 700;
+  color: $paprika-dark;
+
+  i {
+    color: $paprika;
+    margin-right: 0.4rem;
+  }
+}
+
+.point-list {
+  padding-left: 1.1rem;
+
+  li {
+    margin-bottom: 0.35rem;
+  }
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: #fff6f2;
+  color: $paprika-dark;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.month-badge {
+  display: inline-block;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  background: $paprika;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.quote {
+  margin: 2.5rem 0 1rem;
+  font-style: italic;
+  color: #7a7a7a;
+
+  footer {
+    margin-top: 0.4rem;
+    font-style: normal;
+    font-size: 0.85rem;
+  }
+}
+
 /* Cookbook sub-tabs */
 .nav-pills .nav-link {
   color: $paprika-dark;

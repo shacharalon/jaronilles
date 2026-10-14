@@ -7,4 +7,5 @@ import { SITE_CONTENT } from 'src/app/data/site-content';
 })
 export class AboutComponent {
   about = SITE_CONTENT.about;
+  pm = SITE_CONTENT.projectManagement;
 }

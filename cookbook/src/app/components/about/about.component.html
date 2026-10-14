@@ -18,3 +18,59 @@
     </div>
   </div>
 </div>
+
+<!-- Project management (from the assessment presentation) -->
+<h3 class="page-title text-center mt-5">{{ pm.title }}</h3>
+<hr class="page-divider" />
+<p class="text-center text-muted">{{ pm.subtitle }}</p>
+
+<h5 class="section-title">{{ pm.p3.title }}</h5>
+<div class="row g-3 mb-4">
+  <div class="col-md-4" *ngFor="let o of pm.p3.items">
+    <div class="info-card text-center h-100">
+      <i class="fa-solid {{ o.icon }} feature-icon"></i>
+      <div class="fw-semibold">{{ o.name }}</div>
+    </div>
+  </div>
+</div>
+
+<h5 class="section-title">{{ pm.successFactors.title }}</h5>
+<div class="row g-3 mb-4">
+  <div class="col-md-6" *ngFor="let g of pm.successFactors.groups">
+    <div class="info-card h-100">
+      <h6 class="card-heading"><i class="fa-solid {{ g.icon }}"></i> {{ g.name }}</h6>
+      <ul class="point-list">
+        <li *ngFor="let p of g.points">{{ p }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h5 class="section-title">{{ pm.methods.title }}</h5>
+<div class="info-card mb-4">
+  <div class="tag-list">
+    <span class="tag" *ngFor="let t of pm.methods.tags">{{ t }}</span>
+  </div>
+  <h6 class="card-heading mt-4">{{ pm.methods.backlog.title }}</h6>
+  <ul class="point-list mb-0">
+    <li *ngFor="let p of pm.methods.backlog.points">{{ p }}</li>
+  </ul>
+</div>
+
+<h5 class="section-title">{{ pm.startPlan.title }}</h5>
+<div class="row g-3 mb-4">
+  <div class="col-md-6" *ngFor="let m of pm.startPlan.months">
+    <div class="info-card h-100">
+      <span class="month-badge">{{ m.month }}</span>
+      <h6 class="card-heading mt-2">{{ m.title }}</h6>
+      <ul class="point-list mb-0">
+        <li *ngFor="let p of m.points">{{ p }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<blockquote class="quote text-center">
+  &ldquo;{{ pm.quote.text }}&rdquo;
+  <footer>&ndash; {{ pm.quote.author }}</footer>
+</blockquote>
