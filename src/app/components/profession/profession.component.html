@@ -1,11 +1,28 @@
 <h3 class="page-title text-center">{{ title }}</h3>
 <hr class="page-divider" />
 
-<div class="row g-4">
-  <div class="col-md-4" *ngFor="let s of profession.sections">
-    <div class="info-card h-100">
-      <h5 class="card-heading"><i class="fa-solid {{ s.icon }}"></i> {{ s.title }}</h5>
-      <p class="mb-0">{{ s.text }}</p>
+<div class="info-card career-card mb-4" *ngIf="profession.careerImage">
+  <img [src]="profession.careerImage" [alt]="profession.careerImageAlt" class="career-image" />
+</div>
+
+<div class="info-card mb-4" *ngFor="let s of profession.sections">
+  <h5 class="card-heading"><i class="fa-solid {{ s.icon }}"></i> {{ s.title }}</h5>
+  <p [class.mb-0]="!s.image">{{ s.text }}</p>
+
+  <div class="row g-4 align-items-center" *ngIf="s.image">
+    <div class="col-lg-6">
+      <img [src]="s.image" [alt]="s.imageAlt" class="img-fluid rounded" />
+    </div>
+    <div class="col-lg-6" *ngIf="s.points">
+      <div class="role-point" *ngFor="let p of s.points">
+        <h6 class="card-heading mb-1"><i class="fa-solid {{ p.icon }}"></i> {{ p.name }}</h6>
+        <p class="mb-3">{{ p.text }}</p>
+      </div>
     </div>
   </div>
+</div>
+
+<h5 class="section-title">{{ profession.certifications.title }}</h5>
+<div class="info-card career-card">
+  <img [src]="profession.certifications.image" [alt]="profession.certifications.imageAlt" class="career-image" />
 </div>

@@ -2,10 +2,11 @@
 <hr class="page-divider" />
 
 <div class="row g-4">
-  <div class="col-md-4" *ngFor="let h of hobbies">
-    <div class="info-card text-center h-100">
-      <i class="fa-solid {{ h.icon }} feature-icon"></i>
-      <h5>{{ h.title }}</h5>
+  <div class="col-sm-6 col-lg-3" *ngFor="let h of hobbies">
+    <div class="info-card hobby-card text-center h-100">
+      <img *ngIf="h.image" [src]="h.image" [alt]="h.title" class="hobby-photo" />
+      <i *ngIf="!h.image" class="fa-solid {{ h.icon }} feature-icon"></i>
+      <h5><i *ngIf="h.image" class="fa-solid {{ h.icon }} hobby-icon"></i> {{ h.title }}</h5>
       <p class="mb-0">{{ h.text }}</p>
     </div>
   </div>

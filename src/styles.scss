@@ -95,6 +95,67 @@ $accent: #6BA8E0;
   }
 }
 
+.section-title {
+  margin: 2rem 0 1rem;
+  font-weight: 700;
+  color: $primary-dark;
+}
+
+.career-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.career-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hobby-card {
+  padding: 0 0 1.25rem;
+  overflow: hidden;
+
+  h5,
+  p {
+    padding: 0 1rem;
+  }
+
+  .feature-icon {
+    margin-top: 1.5rem;
+  }
+}
+
+.hobby-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 25%;
+  margin-bottom: 0.9rem;
+}
+
+.hobby-icon {
+  color: $primary;
+  margin-right: 0.3rem;
+}
+
+.quote {
+  max-width: 640px;
+  margin: 2rem auto 1rem;
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 600;
+  color: $primary-dark;
+
+  footer {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    color: #7a7a7a;
+  }
+}
+
 .fact-sheet {
   max-width: 640px;
   margin: 0 auto;

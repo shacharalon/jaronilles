@@ -9,6 +9,16 @@ export interface HistoryEntry {
   text: string;
 }
 
+/** A role on the Profession page. Optional picture and list of points for a longer description. */
+export interface RoleSection {
+  icon: string;
+  title: string;
+  text: string;
+  image?: string;
+  imageAlt?: string;
+  points?: { icon: string; name: string; text: string }[];
+}
+
 export const CONTENT_EN = {
   ui: {
     learnMore: 'Learn more',
@@ -39,6 +49,10 @@ export const CONTENT_EN = {
   photo: 'assets/images/jaron.webp',
 
   about: {
+    quote: {
+      text: 'If you’re not prepared to be wrong, you’ll never come up with anything original.',
+      author: 'Sir Ken Robinson'
+    },
     intro:
       'I work as a Product Owner, in management and as a project leader. I like to lead teams openly ' +
       'and transparently: with clear project visions, a lived feedback culture and respectful ' +
@@ -50,16 +64,51 @@ export const CONTENT_EN = {
       { icon: 'fa-diagram-project', label: 'Focus', value: 'Project, program and portfolio management (P3)' },
       { icon: 'fa-gears', label: 'Methods', value: 'Agile, classic and hybrid (e.g. HERMES, waterfall)' },
       { icon: 'fa-industry', label: 'Interests', value: 'Smart Factory, AI' },
-      { icon: 'fa-sailboat', label: 'Hobbies', value: 'Cooking, Selling, Sailing' }
+      { icon: 'fa-sailboat', label: 'Hobbies', value: 'Cooking, Selling, Sailing, Diving' }
     ]
   },
 
   profession: {
+    careerImage: 'assets/images/career.png',
+    careerImageAlt: 'Career timeline since 1999',
+    certifications: {
+      title: 'Certifications',
+      image: 'assets/images/certifications.png',
+      imageAlt: 'Certifications and methods: Hermes, Scrum Alliance CSM and CSPO, IPMA, Lean, TQM, TDD'
+    },
     sections: [
       { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
-      { icon: 'fa-people-group', title: 'Management', text: TBD },
+      {
+        icon: 'fa-people-group',
+        title: 'Management',
+        text: 'Success factors for leading a project team: people, collaboration, culture and process.',
+        image: 'assets/images/success-factors.png',
+        imageAlt: 'Success factors: Skills / People, Collaboration & network, Culture, Process',
+        points: [
+          {
+            icon: 'fa-user',
+            name: 'Skills / People',
+            text: 'Clear project visions, a qualified and motivated team, feedback culture and commitment. Listen, understand, reflect back.'
+          },
+          {
+            icon: 'fa-handshake',
+            name: 'Collaboration & network',
+            text: 'Good collaboration with everyone involved. Connect customers with decision makers and make the best use of the know-how already in the company.'
+          },
+          {
+            icon: 'fa-people-group',
+            name: 'Culture',
+            text: 'Respectful treatment, independent work with a culture of exchange, customer-oriented thinking and open, transparent feedback.'
+          },
+          {
+            icon: 'fa-gears',
+            name: 'Process',
+            text: 'Choose the right method for the project (Stacey matrix: waterfall, hybrid, agile, HERMES), define requirements up front and manage risks actively.'
+          }
+        ]
+      },
       { icon: 'fa-diagram-project', title: 'Project Leader', text: TBD }
-    ]
+    ] as RoleSection[]
   },
 
   smartFactory: {
@@ -126,9 +175,10 @@ export const CONTENT_EN = {
   },
 
   hobbies: [
-    { icon: 'fa-utensils', title: 'Cooking', text: TBD },
-    { icon: 'fa-tags', title: 'Selling', text: TBD },
-    { icon: 'fa-sailboat', title: 'Sailing', text: TBD }
+    { icon: 'fa-utensils', title: 'Cooking', text: TBD, image: 'assets/images/hobby-cooking.jpg' },
+    { icon: 'fa-tags', title: 'Selling', text: TBD, image: '' },
+    { icon: 'fa-sailboat', title: 'Sailing', text: TBD, image: 'assets/images/hobby-sailing.jpg' },
+    { icon: 'fa-water', title: 'Diving', text: TBD, image: 'assets/images/hobby-diving.jpg' }
   ],
 };
 

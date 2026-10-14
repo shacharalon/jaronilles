@@ -34,6 +34,10 @@ export const CONTENT_DE: SiteContent = {
   photo: 'assets/images/jaron.webp',
 
   about: {
+    quote: {
+      text: 'If you’re not prepared to be wrong, you’ll never come up with anything original.',
+      author: 'Sir Ken Robinson'
+    },
     intro:
       'Ich arbeite als Product Owner, im Management und in der Projektleitung. Ich führe Teams gerne ' +
       'offen und transparent: mit klaren Projektvisionen, gelebter Feedbackkultur und respektvoller ' +
@@ -45,14 +49,49 @@ export const CONTENT_DE: SiteContent = {
       { icon: 'fa-diagram-project', label: 'Schwerpunkt', value: 'Projekt-, Programm- und Portfoliomanagement (P3)' },
       { icon: 'fa-gears', label: 'Methoden', value: 'Agil, klassisch und hybrid (z. B. HERMES, Wasserfall)' },
       { icon: 'fa-industry', label: 'Interessen', value: 'Smart Factory, KI' },
-      { icon: 'fa-sailboat', label: 'Hobbys', value: 'Kochen, Verkaufen, Segeln' }
+      { icon: 'fa-sailboat', label: 'Hobbys', value: 'Kochen, Verkaufen, Segeln, Tauchen' }
     ]
   },
 
   profession: {
+    careerImage: 'assets/images/career.png',
+    careerImageAlt: 'Karriere seit 1999',
+    certifications: {
+      title: 'Zertifizierungen',
+      image: 'assets/images/certifications.png',
+      imageAlt: 'Zertifizierungen und Methoden: Hermes, Scrum Alliance CSM und CSPO, IPMA, Lean, TQM, TDD'
+    },
     sections: [
       { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
-      { icon: 'fa-people-group', title: 'Management', text: TBD },
+      {
+        icon: 'fa-people-group',
+        title: 'Management',
+        text: 'Erfolgsfaktoren für die Führung eines Projektteams: Mensch, Zusammenarbeit, Kultur und Prozess.',
+        image: 'assets/images/success-factors.png',
+        imageAlt: 'Erfolgsfaktoren: Skills / Mensch, Zusammenarbeit & Netzwerk, Kultur, Prozess',
+        points: [
+          {
+            icon: 'fa-user',
+            name: 'Skills / Mensch',
+            text: 'Klare Projektvisionen, ein qualifiziertes und motiviertes Team, Feedbackkultur und Commitment. Zuhören, verstehen, wiedergeben.'
+          },
+          {
+            icon: 'fa-handshake',
+            name: 'Zusammenarbeit & Netzwerk',
+            text: 'Gute Zusammenarbeit mit allen Projektbeteiligten. Kunden mit den Entscheidungsträgern vernetzen und das vorhandene Know-how in der Firma optimal nutzen.'
+          },
+          {
+            icon: 'fa-people-group',
+            name: 'Kultur',
+            text: 'Respektvoller Umgang, eigenständige Arbeit mit einer Austauschkultur, kundenorientiertes Denken und eine offene, transparente Feedbackkultur.'
+          },
+          {
+            icon: 'fa-gears',
+            name: 'Prozess',
+            text: 'Die passende Methode zum Projekt wählen (Stacey Matrix: Wasserfall, Hybrid, Agile, HERMES), Anforderungen vor Projektbeginn definieren und Risiken aktiv managen.'
+          }
+        ]
+      },
       { icon: 'fa-diagram-project', title: 'Projektleitung', text: TBD }
     ]
   },
@@ -117,8 +156,9 @@ export const CONTENT_DE: SiteContent = {
   },
 
   hobbies: [
-    { icon: 'fa-utensils', title: 'Kochen', text: TBD },
-    { icon: 'fa-tags', title: 'Verkaufen', text: TBD },
-    { icon: 'fa-sailboat', title: 'Segeln', text: TBD }
+    { icon: 'fa-utensils', title: 'Kochen', text: TBD, image: 'assets/images/hobby-cooking.jpg' },
+    { icon: 'fa-tags', title: 'Verkaufen', text: TBD, image: '' },
+    { icon: 'fa-sailboat', title: 'Segeln', text: TBD, image: 'assets/images/hobby-sailing.jpg' },
+    { icon: 'fa-water', title: 'Tauchen', text: TBD, image: 'assets/images/hobby-diving.jpg' }
   ],
 };
