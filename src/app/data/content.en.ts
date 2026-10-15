@@ -9,14 +9,13 @@ export interface HistoryEntry {
   text: string;
 }
 
-/** A role on the Profession page. Optional picture and list of points for a longer description. */
-export interface RoleSection {
+/** One topic on the Profession page: a button that opens its paragraphs and an optional picture. */
+export interface ProfessionItem {
   icon: string;
   title: string;
-  text: string;
+  paragraphs: string[];
   image?: string;
   imageAlt?: string;
-  points?: { icon: string; name: string; text: string }[];
 }
 
 export const CONTENT_EN = {
@@ -70,48 +69,54 @@ export const CONTENT_EN = {
 
   profession: {
     intro: 'Career since 1999: automation, IoT and machine learning.',
-    careerLabel: 'Career',
-    rolesLabel: 'Roles',
-    careerImage: 'assets/images/career.png',
-    careerImageAlt: 'Career timeline since 1999',
-    certifications: {
-      title: 'Certifications',
-      image: 'assets/images/certifications.png',
-      imageAlt: 'Certifications and methods: Hermes, Scrum Alliance CSM and CSPO, IPMA, Lean, TQM, TDD'
-    },
-    sections: [
+    items: [
       {
         icon: 'fa-people-group',
         title: 'Management',
-        text: 'Success factors for leading a project team: people, collaboration, culture and process.',
+        paragraphs: [
+          'I lead teams openly and transparently. For me, a project team succeeds through four things: people, collaboration, culture and process.',
+          'I work with clear project visions and a qualified, motivated team. I listen, understand and reflect back, and I live an open feedback culture with respectful treatment and independent work.',
+          'I connect customers with decision makers, make the best use of the know-how already in the company and choose the right process for each project.'
+        ],
         image: 'assets/images/success-factors.png',
-        imageAlt: 'Success factors: Skills / People, Collaboration & network, Culture, Process',
-        points: [
-          {
-            icon: 'fa-user',
-            name: 'Skills / People',
-            text: 'Clear project visions, a qualified and motivated team, feedback culture and commitment. Listen, understand, reflect back.'
-          },
-          {
-            icon: 'fa-handshake',
-            name: 'Collaboration & network',
-            text: 'Good collaboration with everyone involved. Connect customers with decision makers and make the best use of the know-how already in the company.'
-          },
-          {
-            icon: 'fa-people-group',
-            name: 'Culture',
-            text: 'Respectful treatment, independent work with a culture of exchange, customer-oriented thinking and open, transparent feedback.'
-          },
-          {
-            icon: 'fa-gears',
-            name: 'Process',
-            text: 'Choose the right method for the project (Stacey matrix: waterfall, hybrid, agile, HERMES), define requirements up front and manage risks actively.'
-          }
+        imageAlt: 'Success factors: Skills / People, Collaboration & network, Culture, Process'
+      },
+      {
+        icon: 'fa-bullseye',
+        title: 'Product Owner',
+        paragraphs: [
+          'As a Product Owner, I put communication first. I order the product backlog by budget and story points, so the team always works on what matters most.',
+          'Scope stays variable and the time planning stays in view. I release step by step and use the retrospective to keep goals and requirements right.'
         ]
       },
-      { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
-      { icon: 'fa-diagram-project', title: 'Project Manager', text: TBD }
-    ] as RoleSection[]
+      {
+        icon: 'fa-diagram-project',
+        title: 'Project Manager',
+        paragraphs: [
+          'I choose the method to fit the project: waterfall, hybrid, agile or HERMES, guided by the Stacey matrix.',
+          'Requirements are defined before the project starts, and every requirement has matching tests in the RTM. I match capacity with the workload and manage risks actively.',
+          'I work across project, program and portfolio management (P3).'
+        ]
+      },
+      {
+        icon: 'fa-route',
+        title: 'Career',
+        paragraphs: [
+          'My career began in 1999 and has led me through automation to IoT and machine learning.'
+        ],
+        image: 'assets/images/career.png',
+        imageAlt: 'Career timeline since 1999'
+      },
+      {
+        icon: 'fa-certificate',
+        title: 'Certifications',
+        paragraphs: [
+          'Alongside the Scrum Alliance certifications CSM and CSPO, I work with HERMES, IPMA, Lean, TQM and agile testing.'
+        ],
+        image: 'assets/images/certifications.png',
+        imageAlt: 'Certifications and methods: Hermes, Scrum Alliance CSM and CSPO, IPMA, Lean, TQM, TDD'
+      }
+    ] as ProfessionItem[]
   },
 
   smartFactory: {

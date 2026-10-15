@@ -55,47 +55,53 @@ export const CONTENT_DE: SiteContent = {
 
   profession: {
     intro: 'Karriere seit 1999: Automation, IoT und Machine Learning.',
-    careerLabel: 'Karriere',
-    rolesLabel: 'Rollen',
-    careerImage: 'assets/images/career.png',
-    careerImageAlt: 'Karriere seit 1999',
-    certifications: {
-      title: 'Zertifizierungen',
-      image: 'assets/images/certifications.png',
-      imageAlt: 'Zertifizierungen und Methoden: Hermes, Scrum Alliance CSM und CSPO, IPMA, Lean, TQM, TDD'
-    },
-    sections: [
+    items: [
       {
         icon: 'fa-people-group',
         title: 'Management',
-        text: 'Erfolgsfaktoren für die Führung eines Projektteams: Mensch, Zusammenarbeit, Kultur und Prozess.',
+        paragraphs: [
+          'Ich führe Teams offen und transparent. Für mich gelingt ein Projektteam durch vier Dinge: Mensch, Zusammenarbeit, Kultur und Prozess.',
+          'Ich arbeite mit klaren Projektvisionen und einem qualifizierten, motivierten Team. Ich höre zu, verstehe und gebe wieder, und lebe eine offene Feedbackkultur mit respektvollem Umgang und eigenständiger Arbeit.',
+          'Ich vernetze Kunden mit den Entscheidungsträgern, nutze das vorhandene Know-how in der Firma optimal und wähle für jedes Projekt den passenden Prozess.'
+        ],
         image: 'assets/images/success-factors.png',
-        imageAlt: 'Erfolgsfaktoren: Skills / Mensch, Zusammenarbeit & Netzwerk, Kultur, Prozess',
-        points: [
-          {
-            icon: 'fa-user',
-            name: 'Skills / Mensch',
-            text: 'Klare Projektvisionen, ein qualifiziertes und motiviertes Team, Feedbackkultur und Commitment. Zuhören, verstehen, wiedergeben.'
-          },
-          {
-            icon: 'fa-handshake',
-            name: 'Zusammenarbeit & Netzwerk',
-            text: 'Gute Zusammenarbeit mit allen Projektbeteiligten. Kunden mit den Entscheidungsträgern vernetzen und das vorhandene Know-how in der Firma optimal nutzen.'
-          },
-          {
-            icon: 'fa-people-group',
-            name: 'Kultur',
-            text: 'Respektvoller Umgang, eigenständige Arbeit mit einer Austauschkultur, kundenorientiertes Denken und eine offene, transparente Feedbackkultur.'
-          },
-          {
-            icon: 'fa-gears',
-            name: 'Prozess',
-            text: 'Die passende Methode zum Projekt wählen (Stacey Matrix: Wasserfall, Hybrid, Agile, HERMES), Anforderungen vor Projektbeginn definieren und Risiken aktiv managen.'
-          }
+        imageAlt: 'Erfolgsfaktoren: Skills / Mensch, Zusammenarbeit & Netzwerk, Kultur, Prozess'
+      },
+      {
+        icon: 'fa-bullseye',
+        title: 'Product Owner',
+        paragraphs: [
+          'Als Product Owner stelle ich die Kommunikation in den Vordergrund. Ich ordne das Product Backlog nach Budget und Storypoints, damit das Team immer am Wichtigsten arbeitet.',
+          'Der Umfang bleibt variabel und die Zeitplanung im Blick. Ich liefere Schritt für Schritt aus und halte Ziele und Anforderungen mit der Retrospektive aktuell.'
         ]
       },
-      { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
-      { icon: 'fa-diagram-project', title: 'Projektmanagement', text: TBD }
+      {
+        icon: 'fa-diagram-project',
+        title: 'Projektmanagement',
+        paragraphs: [
+          'Die Methode wähle ich passend zum Projekt: Wasserfall, Hybrid, Agile oder HERMES, orientiert an der Stacey Matrix.',
+          'Anforderungen sind vor Projektbeginn definiert, und jede Anforderung hat passende Tests im RTM. Ich gleiche die Kapazität mit dem Arbeitsvolumen ab und manage Risiken aktiv.',
+          'Ich arbeite im Projekt-, Programm- und Portfoliomanagement (P3).'
+        ]
+      },
+      {
+        icon: 'fa-route',
+        title: 'Karriere',
+        paragraphs: [
+          'Meine Karriere begann 1999 und führte mich über die Automation zu IoT und Machine Learning.'
+        ],
+        image: 'assets/images/career.png',
+        imageAlt: 'Karriere seit 1999'
+      },
+      {
+        icon: 'fa-certificate',
+        title: 'Zertifizierungen',
+        paragraphs: [
+          'Neben den Scrum-Alliance-Zertifikaten CSM und CSPO arbeite ich mit HERMES, IPMA, Lean, TQM und agilem Testen.'
+        ],
+        image: 'assets/images/certifications.png',
+        imageAlt: 'Zertifizierungen und Methoden: Hermes, Scrum Alliance CSM und CSPO, IPMA, Lean, TQM, TDD'
+      }
     ]
   },
 

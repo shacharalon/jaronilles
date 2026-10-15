@@ -6,6 +6,9 @@ import { LanguageService } from 'src/app/services/language.service';
   templateUrl: './profession.component.html'
 })
 export class ProfessionComponent {
+  /** Index of the topic button that is currently open. */
+  selected = 0;
+
   constructor(private language: LanguageService) {}
 
   get title() {
@@ -18,5 +21,9 @@ export class ProfessionComponent {
 
   get profession() {
     return this.language.content.profession;
+  }
+
+  get current() {
+    return this.profession.items[this.selected];
   }
 }

@@ -7,44 +7,17 @@
   </div>
 </section>
 
-<!-- Roles -->
-<h5 class="section-title text-center">{{ profession.rolesLabel }}</h5>
-<div class="row g-3">
-  <div class="col-md-4" *ngFor="let s of profession.sections">
-    <div class="info-card fact-tile h-100">
-      <i class="fa-solid {{ s.icon }} feature-icon"></i>
-      <h5 class="fact-value">{{ s.title }}</h5>
-      <p class="mb-0">{{ s.text }}</p>
-    </div>
+<div class="row g-3 mt-2">
+  <div class="col-6 col-md" *ngFor="let item of profession.items; let i = index">
+    <button type="button" class="topic-btn" [class.active]="i === selected" (click)="selected = i">
+      <i class="fa-solid {{ item.icon }}"></i>
+      <span>{{ item.title }}</span>
+    </button>
   </div>
 </div>
 
-<!-- Role details (picture and points) -->
-<ng-container *ngFor="let s of profession.sections">
-  <div class="info-card mt-4" *ngIf="s.image">
-    <h5 class="card-heading mb-3"><i class="fa-solid {{ s.icon }}"></i> {{ s.title }}</h5>
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-6">
-        <img [src]="s.image" [alt]="s.imageAlt" class="img-fluid rounded" />
-      </div>
-      <div class="col-lg-6" *ngIf="s.points">
-        <div *ngFor="let p of s.points">
-          <h6 class="card-heading mb-1"><i class="fa-solid {{ p.icon }}"></i> {{ p.name }}</h6>
-          <p class="mb-3">{{ p.text }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</ng-container>
-
-<!-- Career -->
-<h5 class="section-title text-center">{{ profession.careerLabel }}</h5>
-<div class="info-card career-card">
-  <img [src]="profession.careerImage" [alt]="profession.careerImageAlt" class="career-image" />
-</div>
-
-<!-- Certifications -->
-<h5 class="section-title text-center">{{ profession.certifications.title }}</h5>
-<div class="info-card career-card">
-  <img [src]="profession.certifications.image" [alt]="profession.certifications.imageAlt" class="career-image" />
+<div class="info-card topic-panel mt-3">
+  <h5 class="card-heading mb-3"><i class="fa-solid {{ current.icon }}"></i> {{ current.title }}</h5>
+  <p *ngFor="let p of current.paragraphs">{{ p }}</p>
+  <img *ngIf="current.image" [src]="current.image" [alt]="current.imageAlt" class="topic-image" />
 </div>
