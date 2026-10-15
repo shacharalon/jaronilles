@@ -54,13 +54,13 @@ export const CONTENT_EN = {
       author: 'Sir Ken Robinson'
     },
     intro:
-      'I work as a Product Owner, in management and as a project leader. I like to lead teams openly ' +
+      'I work in management, as a Product Owner and as a project manager. I like to lead teams openly ' +
       'and transparently: with clear project visions, a lived feedback culture and respectful ' +
       'collaboration. I choose the method to fit the project, whether classic, agile or hybrid.',
     title: 'Fact sheet',
     rows: [
       { icon: 'fa-user', label: 'Name', value: 'Jaron Illés' },
-      { icon: 'fa-briefcase', label: 'Profession', value: 'Product Owner, Management, Project Leader' },
+      { icon: 'fa-briefcase', label: 'Profession', value: 'Management, Product Owner, Project Manager' },
       { icon: 'fa-diagram-project', label: 'Focus', value: 'Project, program and portfolio management (P3)' },
       { icon: 'fa-gears', label: 'Methods', value: 'Agile, classic and hybrid (e.g. HERMES, waterfall)' },
       { icon: 'fa-industry', label: 'Interests', value: 'Smart Factory, AI' },
@@ -69,6 +69,8 @@ export const CONTENT_EN = {
   },
 
   profession: {
+    careerLabel: 'Career',
+    rolesLabel: 'Roles',
     careerImage: 'assets/images/career.png',
     careerImageAlt: 'Career timeline since 1999',
     certifications: {
@@ -77,7 +79,6 @@ export const CONTENT_EN = {
       imageAlt: 'Certifications and methods: Hermes, Scrum Alliance CSM and CSPO, IPMA, Lean, TQM, TDD'
     },
     sections: [
-      { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
       {
         icon: 'fa-people-group',
         title: 'Management',
@@ -107,7 +108,8 @@ export const CONTENT_EN = {
           }
         ]
       },
-      { icon: 'fa-diagram-project', title: 'Project Leader', text: TBD }
+      { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
+      { icon: 'fa-diagram-project', title: 'Project Manager', text: TBD }
     ] as RoleSection[]
   },
 

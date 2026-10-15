@@ -1,28 +1,50 @@
 <h3 class="page-title text-center">{{ title }}</h3>
 <hr class="page-divider" />
 
-<div class="info-card career-card mb-4" *ngIf="profession.careerImage">
+<ul class="nav nav-pills justify-content-center mb-4">
+  <li class="nav-item">
+    <button type="button" class="nav-link" [class.active]="view === 'career'" (click)="view = 'career'">
+      <i class="fa-solid fa-route"></i> {{ profession.careerLabel }}
+    </button>
+  </li>
+  <li class="nav-item">
+    <button type="button" class="nav-link" [class.active]="view === 'roles'" (click)="view = 'roles'">
+      <i class="fa-solid fa-briefcase"></i> {{ profession.rolesLabel }}
+    </button>
+  </li>
+  <li class="nav-item">
+    <button type="button" class="nav-link" [class.active]="view === 'certifications'" (click)="view = 'certifications'">
+      <i class="fa-solid fa-certificate"></i> {{ profession.certifications.title }}
+    </button>
+  </li>
+</ul>
+
+<!-- Career -->
+<div class="info-card career-card" *ngIf="view === 'career'">
   <img [src]="profession.careerImage" [alt]="profession.careerImageAlt" class="career-image" />
 </div>
 
-<div class="info-card mb-4" *ngFor="let s of profession.sections">
-  <h5 class="card-heading"><i class="fa-solid {{ s.icon }}"></i> {{ s.title }}</h5>
-  <p [class.mb-0]="!s.image">{{ s.text }}</p>
+<!-- Roles -->
+<ng-container *ngIf="view === 'roles'">
+  <div class="info-card mb-4" *ngFor="let s of profession.sections">
+    <h5 class="card-heading"><i class="fa-solid {{ s.icon }}"></i> {{ s.title }}</h5>
+    <p [class.mb-0]="!s.image">{{ s.text }}</p>
 
-  <div class="row g-4 align-items-center" *ngIf="s.image">
-    <div class="col-lg-6">
-      <img [src]="s.image" [alt]="s.imageAlt" class="img-fluid rounded" />
-    </div>
-    <div class="col-lg-6" *ngIf="s.points">
-      <div class="role-point" *ngFor="let p of s.points">
-        <h6 class="card-heading mb-1"><i class="fa-solid {{ p.icon }}"></i> {{ p.name }}</h6>
-        <p class="mb-3">{{ p.text }}</p>
+    <div class="row g-4 align-items-center" *ngIf="s.image">
+      <div class="col-lg-6">
+        <img [src]="s.image" [alt]="s.imageAlt" class="img-fluid rounded" />
+      </div>
+      <div class="col-lg-6" *ngIf="s.points">
+        <div *ngFor="let p of s.points">
+          <h6 class="card-heading mb-1"><i class="fa-solid {{ p.icon }}"></i> {{ p.name }}</h6>
+          <p class="mb-3">{{ p.text }}</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</ng-container>
 
-<h5 class="section-title">{{ profession.certifications.title }}</h5>
-<div class="info-card career-card">
+<!-- Certifications -->
+<div class="info-card career-card" *ngIf="view === 'certifications'">
   <img [src]="profession.certifications.image" [alt]="profession.certifications.imageAlt" class="career-image" />
 </div>

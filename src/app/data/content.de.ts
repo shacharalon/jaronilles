@@ -39,13 +39,13 @@ export const CONTENT_DE: SiteContent = {
       author: 'Sir Ken Robinson'
     },
     intro:
-      'Ich arbeite als Product Owner, im Management und in der Projektleitung. Ich führe Teams gerne ' +
+      'Ich arbeite im Management, als Product Owner und im Projektmanagement. Ich führe Teams gerne ' +
       'offen und transparent: mit klaren Projektvisionen, gelebter Feedbackkultur und respektvoller ' +
       'Zusammenarbeit. Die Methode wähle ich passend zum Projekt, ob klassisch, agil oder hybrid.',
     title: 'Steckbrief',
     rows: [
       { icon: 'fa-user', label: 'Name', value: 'Jaron Illés' },
-      { icon: 'fa-briefcase', label: 'Beruf', value: 'Product Owner, Management, Projektleitung' },
+      { icon: 'fa-briefcase', label: 'Beruf', value: 'Management, Product Owner, Projektmanagement' },
       { icon: 'fa-diagram-project', label: 'Schwerpunkt', value: 'Projekt-, Programm- und Portfoliomanagement (P3)' },
       { icon: 'fa-gears', label: 'Methoden', value: 'Agil, klassisch und hybrid (z. B. HERMES, Wasserfall)' },
       { icon: 'fa-industry', label: 'Interessen', value: 'Smart Factory, KI' },
@@ -54,6 +54,8 @@ export const CONTENT_DE: SiteContent = {
   },
 
   profession: {
+    careerLabel: 'Karriere',
+    rolesLabel: 'Rollen',
     careerImage: 'assets/images/career.png',
     careerImageAlt: 'Karriere seit 1999',
     certifications: {
@@ -62,7 +64,6 @@ export const CONTENT_DE: SiteContent = {
       imageAlt: 'Zertifizierungen und Methoden: Hermes, Scrum Alliance CSM und CSPO, IPMA, Lean, TQM, TDD'
     },
     sections: [
-      { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
       {
         icon: 'fa-people-group',
         title: 'Management',
@@ -92,7 +93,8 @@ export const CONTENT_DE: SiteContent = {
           }
         ]
       },
-      { icon: 'fa-diagram-project', title: 'Projektleitung', text: TBD }
+      { icon: 'fa-bullseye', title: 'Product Owner', text: TBD },
+      { icon: 'fa-diagram-project', title: 'Projektmanagement', text: TBD }
     ]
   },
 
