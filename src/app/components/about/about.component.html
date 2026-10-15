@@ -1,25 +1,24 @@
-<h3 class="page-title text-center">{{ title }}</h3>
-<hr class="page-divider" />
+<section class="about-hero">
+  <img [src]="about.photo" [alt]="name" class="about-photo" />
+  <div class="about-hero-text">
+    <h1 class="about-name">{{ name }}</h1>
+    <p class="about-role">{{ about.role }}</p>
+    <p class="about-intro">{{ about.intro }}</p>
+  </div>
+</section>
 
-<div class="text-center mb-4">
-  <img [src]="about.photo" [alt]="title" class="about-photo" />
-</div>
-
-<div class="info-card fact-sheet mb-4">
-  <p class="mb-0">{{ about.intro }}</p>
-</div>
-
-<div class="info-card fact-sheet">
-  <h5 class="card-heading mb-3">{{ about.title }}</h5>
-  <dl class="fact-rows">
-    <div class="fact-row" *ngFor="let r of about.rows">
-      <dt><i class="fa-solid {{ r.icon }}"></i> {{ r.label }}</dt>
-      <dd>{{ r.value }}</dd>
+<h5 class="section-title text-center">{{ about.title }}</h5>
+<div class="row g-3">
+  <div class="col-sm-6 col-lg-3" *ngFor="let r of about.rows">
+    <div class="info-card fact-tile h-100">
+      <i class="fa-solid {{ r.icon }} feature-icon"></i>
+      <div class="fact-label">{{ r.label }}</div>
+      <div class="fact-value">{{ r.value }}</div>
     </div>
-  </dl>
+  </div>
 </div>
 
-<blockquote class="quote text-center">
-  &ldquo;{{ about.quote.text }}&rdquo;
+<blockquote class="quote-banner">
+  <span class="quote-text">&ldquo;{{ about.quote.text }}&rdquo;</span>
   <footer>&ndash; {{ about.quote.author }}</footer>
 </blockquote>

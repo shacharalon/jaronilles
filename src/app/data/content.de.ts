@@ -43,10 +43,9 @@ export const CONTENT_DE: SiteContent = {
       'Ich arbeite im Management, als Product Owner und im Projektmanagement. Ich führe Teams gerne ' +
       'offen und transparent: mit klaren Projektvisionen, gelebter Feedbackkultur und respektvoller ' +
       'Zusammenarbeit. Die Methode wähle ich passend zum Projekt, ob klassisch, agil oder hybrid.',
+    role: 'Management · Product Owner · Projektmanagement',
     title: 'Steckbrief',
     rows: [
-      { icon: 'fa-user', label: 'Name', value: 'Jaron Illés' },
-      { icon: 'fa-briefcase', label: 'Beruf', value: 'Management, Product Owner, Projektmanagement' },
       { icon: 'fa-diagram-project', label: 'Schwerpunkt', value: 'Projekt-, Programm- und Portfoliomanagement (P3)' },
       { icon: 'fa-gears', label: 'Methoden', value: 'Agil, klassisch und hybrid (z. B. HERMES, Wasserfall)' },
       { icon: 'fa-industry', label: 'Interessen', value: 'Smart Factory, KI' },

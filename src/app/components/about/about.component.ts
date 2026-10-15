@@ -12,6 +12,10 @@ export class AboutComponent {
     return this.language.content.nav.about;
   }
 
+  get name() {
+    return this.language.content.owner;
+  }
+
   get about() {
     return this.language.content.about;
   }

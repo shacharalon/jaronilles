@@ -54,12 +54,98 @@ $accent: #6BA8E0;
   object-fit: contain;
 }
 
+/* About me */
+.about-hero {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, $primary-dark, $primary);
+  color: #fff;
+  box-shadow: 0 8px 28px rgba(31, 58, 95, 0.25);
+}
+
 .about-photo {
-  width: 180px;
-  height: 180px;
+  flex: 0 0 auto;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-name {
+  margin: 0;
+  font-weight: 800;
+}
+
+.about-role {
+  margin: 0.35rem 0 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #cfe3f8;
+}
+
+.about-intro {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.fact-tile {
+  text-align: center;
+
+  .feature-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.fact-label {
+  margin-bottom: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7a7a7a;
+}
+
+.fact-value {
+  font-weight: 600;
+  color: $primary-dark;
+}
+
+.quote-banner {
+  margin: 2.5rem 0 1rem;
+  padding: 2rem 2.5rem;
+  border-radius: 1.25rem;
+  background: #eef4fb;
+  text-align: center;
+
+  .quote-text {
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 600;
+    color: $primary-dark;
+  }
+
+  footer {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #7a7a7a;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
 }
 
 .hero-title {
@@ -145,23 +231,6 @@ $accent: #6BA8E0;
 .hobby-icon {
   color: $primary;
   margin-right: 0.3rem;
-}
-
-.quote {
-  max-width: 640px;
-  margin: 2rem auto 1rem;
-  font-size: 1.15rem;
-  font-style: italic;
-  font-weight: 600;
-  color: $primary-dark;
-
-  footer {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    font-style: normal;
-    font-weight: 400;
-    color: #7a7a7a;
-  }
 }
 
 .fact-sheet {
