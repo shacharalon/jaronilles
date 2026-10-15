@@ -49,7 +49,7 @@ export const CONTENT_DE: SiteContent = {
       { icon: 'fa-diagram-project', label: 'Schwerpunkt', value: 'Projekt-, Programm- und Portfoliomanagement (P3)' },
       { icon: 'fa-gears', label: 'Methoden', value: 'Agil, klassisch und hybrid (z. B. HERMES, Wasserfall)' },
       { icon: 'fa-industry', label: 'Interessen', value: 'Smart Factory, KI' },
-      { icon: 'fa-sailboat', label: 'Hobbys', value: 'Kochen, Verkaufen, Segeln, Tauchen' }
+      { icon: 'fa-sailboat', label: 'Hobbys', value: 'Kochen, Wandern mit der Familie, Segeln, Tauchen' }
     ]
   },
 
@@ -159,7 +159,7 @@ export const CONTENT_DE: SiteContent = {
 
   hobbies: [
     { icon: 'fa-utensils', title: 'Kochen', text: TBD, image: 'assets/images/hobby-cooking.jpg' },
-    { icon: 'fa-tags', title: 'Verkaufen', text: TBD, image: '' },
+    { icon: 'fa-person-hiking', title: 'Wandern mit der Familie', text: TBD, image: 'assets/images/hobby-hiking.jpg' },
     { icon: 'fa-sailboat', title: 'Segeln', text: TBD, image: 'assets/images/hobby-sailing.jpg' },
     { icon: 'fa-water', title: 'Tauchen', text: TBD, image: 'assets/images/hobby-diving.jpg' }
   ],
