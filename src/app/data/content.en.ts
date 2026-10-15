@@ -49,6 +49,7 @@ export const CONTENT_EN = {
   photo: 'assets/images/jaron.webp',
 
   about: {
+    photo: 'assets/images/jaron-about.png',
     quote: {
       text: 'If you’re not prepared to be wrong, you’ll never come up with anything original.',
       author: 'Sir Ken Robinson'
