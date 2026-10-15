@@ -1,36 +1,29 @@
-<h3 class="page-title text-center">{{ title }}</h3>
-<hr class="page-divider" />
-
-<ul class="nav nav-pills justify-content-center mb-4">
-  <li class="nav-item">
-    <button type="button" class="nav-link" [class.active]="view === 'career'" (click)="view = 'career'">
-      <i class="fa-solid fa-route"></i> {{ profession.careerLabel }}
-    </button>
-  </li>
-  <li class="nav-item">
-    <button type="button" class="nav-link" [class.active]="view === 'roles'" (click)="view = 'roles'">
-      <i class="fa-solid fa-briefcase"></i> {{ profession.rolesLabel }}
-    </button>
-  </li>
-  <li class="nav-item">
-    <button type="button" class="nav-link" [class.active]="view === 'certifications'" (click)="view = 'certifications'">
-      <i class="fa-solid fa-certificate"></i> {{ profession.certifications.title }}
-    </button>
-  </li>
-</ul>
-
-<!-- Career -->
-<div class="info-card career-card" *ngIf="view === 'career'">
-  <img [src]="profession.careerImage" [alt]="profession.careerImageAlt" class="career-image" />
-</div>
+<section class="hero-banner">
+  <div class="hero-icon"><i class="fa-solid fa-briefcase"></i></div>
+  <div>
+    <h1 class="about-name">{{ title }}</h1>
+    <p class="about-role">{{ role }}</p>
+    <p class="about-intro">{{ profession.intro }}</p>
+  </div>
+</section>
 
 <!-- Roles -->
-<ng-container *ngIf="view === 'roles'">
-  <div class="info-card mb-4" *ngFor="let s of profession.sections">
-    <h5 class="card-heading"><i class="fa-solid {{ s.icon }}"></i> {{ s.title }}</h5>
-    <p [class.mb-0]="!s.image">{{ s.text }}</p>
+<h5 class="section-title text-center">{{ profession.rolesLabel }}</h5>
+<div class="row g-3">
+  <div class="col-md-4" *ngFor="let s of profession.sections">
+    <div class="info-card fact-tile h-100">
+      <i class="fa-solid {{ s.icon }} feature-icon"></i>
+      <h5 class="fact-value">{{ s.title }}</h5>
+      <p class="mb-0">{{ s.text }}</p>
+    </div>
+  </div>
+</div>
 
-    <div class="row g-4 align-items-center" *ngIf="s.image">
+<!-- Role details (picture and points) -->
+<ng-container *ngFor="let s of profession.sections">
+  <div class="info-card mt-4" *ngIf="s.image">
+    <h5 class="card-heading mb-3"><i class="fa-solid {{ s.icon }}"></i> {{ s.title }}</h5>
+    <div class="row g-4 align-items-center">
       <div class="col-lg-6">
         <img [src]="s.image" [alt]="s.imageAlt" class="img-fluid rounded" />
       </div>
@@ -44,7 +37,14 @@
   </div>
 </ng-container>
 
+<!-- Career -->
+<h5 class="section-title text-center">{{ profession.careerLabel }}</h5>
+<div class="info-card career-card">
+  <img [src]="profession.careerImage" [alt]="profession.careerImageAlt" class="career-image" />
+</div>
+
 <!-- Certifications -->
-<div class="info-card career-card" *ngIf="view === 'certifications'">
+<h5 class="section-title text-center">{{ profession.certifications.title }}</h5>
+<div class="info-card career-card">
   <img [src]="profession.certifications.image" [alt]="profession.certifications.imageAlt" class="career-image" />
 </div>

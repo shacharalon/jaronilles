@@ -54,6 +54,7 @@ export const CONTENT_DE: SiteContent = {
   },
 
   profession: {
+    intro: 'Karriere seit 1999: Automation, IoT und Machine Learning.',
     careerLabel: 'Karriere',
     rolesLabel: 'Rollen',
     careerImage: 'assets/images/career.png',

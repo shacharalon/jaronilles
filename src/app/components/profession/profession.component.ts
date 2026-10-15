@@ -6,12 +6,14 @@ import { LanguageService } from 'src/app/services/language.service';
   templateUrl: './profession.component.html'
 })
 export class ProfessionComponent {
-  view: 'career' | 'roles' | 'certifications' = 'career';
-
   constructor(private language: LanguageService) {}
 
   get title() {
     return this.language.content.nav.profession;
+  }
+
+  get role() {
+    return this.language.content.about.role;
   }
 
   get profession() {

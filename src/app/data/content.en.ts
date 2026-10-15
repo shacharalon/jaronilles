@@ -69,6 +69,7 @@ export const CONTENT_EN = {
   },
 
   profession: {
+    intro: 'Career since 1999: automation, IoT and machine learning.',
     careerLabel: 'Career',
     rolesLabel: 'Roles',
     careerImage: 'assets/images/career.png',
